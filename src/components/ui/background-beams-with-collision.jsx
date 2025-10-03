@@ -88,13 +88,7 @@ export const BackgroundBeamsWithCollision = ({
                     parentRef={parentRef} />
             ))}
             {children}
-            {/* <div
-                ref={containerRef}
-                className="absolute bottom-0 bg-neutral-100 w-full inset-x-0 pointer-events-none"
-                style={{
-                    boxShadow:
-                        "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
-                }}></div> */}
+
         </div>
     );
 };
@@ -193,36 +187,9 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
                     "absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-neutral-100 via-neutral-500 to-transparent",
                     beamOptions.className
                 )} />
-            <AnimatePresence>
-                {collision.detected && collision.coordinates && (
-                    <Explosion
-                        key={`${collision.coordinates.x}-${collision.coordinates.y}`}
-                        className=""
-                        style={{
-                            left: `${collision.coordinates.x}px`,
-                            top: `${collision.coordinates.y}px`,
-                            transform: "translate(-50%, -50%)",
-                        }} />
-                )}
-            </AnimatePresence>
         </>
     );
 });
 
 CollisionMechanism.displayName = "CollisionMechanism";
 
-const Explosion = ({
-    ...props
-}) => {
-    return (
-        <div {...props} className={cn("absolute z-50", props.className)}>
-            {/* Lingkaran putih sederhana */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: [0, 1, 0], scale: [0, 1, 1] }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="absolute h-2 w-2 rounded-full bg-white"></motion.div>
-        </div>
-    );
-};
