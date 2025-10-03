@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import React, { useRef, useState, useEffect } from "react";
 
 export const BackgroundBeamsWithCollision = ({
@@ -17,6 +17,7 @@ export const BackgroundBeamsWithCollision = ({
             duration: 7,
             repeatDelay: 3,
             delay: 2,
+            blinkSpeed: 1.5,
         },
         {
             initialX: 600,
@@ -24,6 +25,7 @@ export const BackgroundBeamsWithCollision = ({
             duration: 3,
             repeatDelay: 3,
             delay: 4,
+            blinkSpeed: 1,
         },
         {
             initialX: 200,
@@ -31,6 +33,7 @@ export const BackgroundBeamsWithCollision = ({
             duration: 7,
             repeatDelay: 7,
             className: "h-6",
+            blinkSpeed: 2,
         },
         {
             initialX: 400,
@@ -38,6 +41,7 @@ export const BackgroundBeamsWithCollision = ({
             duration: 5,
             repeatDelay: 14,
             delay: 4,
+            blinkSpeed: 1.2,
         },
         {
             initialX: 800,
@@ -45,6 +49,7 @@ export const BackgroundBeamsWithCollision = ({
             duration: 11,
             repeatDelay: 2,
             className: "h-20",
+            blinkSpeed: 1.8,
         },
         {
             initialX: 1000,
@@ -52,6 +57,7 @@ export const BackgroundBeamsWithCollision = ({
             duration: 4,
             repeatDelay: 2,
             className: "h-12",
+            blinkSpeed: 0.8,
         },
         {
             initialX: 1200,
@@ -60,6 +66,7 @@ export const BackgroundBeamsWithCollision = ({
             repeatDelay: 4,
             delay: 2,
             className: "h-6",
+            blinkSpeed: 1.6,
         },
     ];
 
@@ -68,7 +75,6 @@ export const BackgroundBeamsWithCollision = ({
             ref={parentRef}
             className={cn(
                 "h-screen bg-gradient-to-b  from-neutral-950 to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
-                // h-screen if you want bigger
                 className
             )}>
             <div
@@ -79,7 +85,6 @@ export const BackgroundBeamsWithCollision = ({
                     "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
                 )} />
 
-            {/* Radial gradient for the container to give a faded look */}
             {beams.map((beam) => (
                 <CollisionMechanism
                     key={beam.initialX + "beam-idx"}
@@ -186,10 +191,35 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
                 className={cn(
                     "absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-neutral-100 via-neutral-500 to-transparent",
                     beamOptions.className
-                )} />
+                )}>
+
+                {/* Lingkaran putih berkedip di ujung beam */}
+                <BlinkingStar blinkSpeed={beamOptions.blinkSpeed || 1.5} />
+            </motion.div>
         </>
     );
 });
 
 CollisionMechanism.displayName = "CollisionMechanism";
+
+// Komponen Bintang Berkedip
+const BlinkingStar = ({
+    blinkSpeed = 1.5
+}) => {
+    return (
+        <motion.div
+            className="absolute left-1/2 -translate-x-1/2 rounded-full -bottom-1 h-2 w-2 bg-white"
+            animate={{
+                opacity: [0.3, 1, 0.3],
+                scale: [0.8, 1.2, 0.8],
+            }}
+            transition={{
+                duration: blinkSpeed,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+            }}
+        />
+    );
+};
 
