@@ -204,7 +204,7 @@ CollisionMechanism.displayName = "CollisionMechanism";
 
 // Komponen Bintang Berkedip
 const BlinkingStar = ({
-    blinkSpeed = 1.5
+    blinkSpeed = 0.5
 }) => {
     return (
         <motion.div

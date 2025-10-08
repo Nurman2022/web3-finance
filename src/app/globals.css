@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.hero-gradient {
+background-image: url(../../public/image/hero-gradient.png);
+background-size: cover;
+background-position: center;
+}
