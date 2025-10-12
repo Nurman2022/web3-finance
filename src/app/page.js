@@ -1,6 +1,9 @@
 'use client'
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { NavbarDemo } from "@/components/Navbar";
+import { Features } from "@/components/ui/Features";
+import { FAQ } from "@/components/ui/FAQ";
+import { Footer } from "@/components/ui/Footer";
 
 export default function Home() {
 
@@ -78,22 +81,17 @@ export default function Home() {
           </div>
 
         </div>
-        <div className="min-h-screen text-white">
-          <h1>tes</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum semper interdum. Aliquam aliquet, quam a egestas imperdiet, mauris enim tempor diam, volutpat facilisis arcu libero in sapien. Nullam aliquam leo at ipsum faucibus, vel efficitur libero dictum. Nullam eget velit vitae erat dignissim viverra. Donec id ultrices lectus. Praesent a luctus est. Suspendisse potenti. Nunc et mollis lectus. Vestibulum faucibus metus ut libero tempus feugiat. Cras auctor malesuada justo eu molestie. Morbi eu turpis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-            In vestibulum, nisl eget mattis sagittis, erat risus imperdiet felis, et placerat orci tellus ac nisi. Quisque feugiat tempus hendrerit. Ut tristique laoreet neque tempus cursus. Nam lacus nisl, dignissim quis consectetur sit amet, blandit vel arcu. Cras rutrum urna turpis, a luctus lectus ultrices ac. Suspendisse efficitur purus non tortor maximus posuere. Cras at magna a urna blandit suscipit. Nulla facilisi. Morbi luctus ante sit amet ex bibendum, eget auctor ligula pulvinar. Praesent vitae enim in arcu fringilla mollis non vitae magna. Aenean cursus aliquet libero, sed volutpat ex vehicula iaculis. Maecenas aliquet, odio a mollis aliquet, lorem tortor vehicula augue, maximus dictum ipsum velit sit amet odio. Duis ac purus eros.
 
-            Quisque scelerisque, ligula a efficitur hendrerit, velit turpis auctor tellus, id elementum erat elit id dui. Vestibulum at nibh eu tellus vulputate feugiat vitae non nisi. Duis vel laoreet nunc, sodales semper arcu. Ut vestibulum aliquam tincidunt. Vestibulum id lorem vel urna malesuada sollicitudin. Sed non libero suscipit, condimentum sapien at, imperdiet leo. Ut dictum vehicula fermentum. Integer sodales scelerisque augue eu consectetur. Ut sit amet varius urna, eget congue sapien. In eleifend, est in blandit scelerisque, nunc tortor malesuada erat, ut rutrum mauris mi at elit.
+        {/* Features Section */}
+        <Features />
 
-            Nullam tempus dui eget ornare mattis. Sed ut ex lectus. Sed egestas, risus et placerat varius, urna nisi convallis est, eget eleifend lacus massa eget orci. Phasellus at vestibulum magna, at laoreet tellus. Quisque ornare enim a tellus congue malesuada. Integer in quam condimentum, volutpat quam ut, placerat dolor. Nam sed tortor mattis, blandit metus eu, fringilla urna. Duis ante erat, commodo eget condimentum sit amet, imperdiet a augue. Nunc semper egestas commodo. Integer nec vestibulum dolor, quis aliquam nisl. Sed dictum, risus id volutpat ultrices, est lectus feugiat elit, eget auctor sapien est id eros. Nam ac turpis a urna feugiat semper. Etiam ipsum lorem, placerat in justo et, egestas faucibus est.
-
-            Cras urna eros, gravida a consectetur vitae, vestibulum varius mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at lorem non libero ornare fermentum. Nunc at varius sem, vitae blandit libero. Vivamus quis elit non velit lobortis commodo nec ut ante. Sed ullamcorper ante non sem condimentum, quis volutpat tortor fermentum. Donec fermentum sem nec mollis tincidunt. Duis sed est ut ipsum bibendum sodales. Integer pellentesque nec felis congue ultrices.</p>
-
-        </div>
+        {/* FAQ Section */}
+        <FAQ />
 
       </NavbarDemo >
 
-
+      {/* Footer */}
+      <Footer />
 
 
       {/* gradent mask */}
