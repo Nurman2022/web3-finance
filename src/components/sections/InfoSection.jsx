@@ -54,13 +54,15 @@ export function InfoSection({ className }) {
                                 </div>
 
                                 {/* CTA Button */}
+                                {/* <div className="absolute inset-0 bg-white rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div> */}
+
                                 <motion.button
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 0.5 }}
                                     whileHover={{ scale: 1.05, x: 5 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="group inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-neutral-200 transition-all duration-300"
+                                    className="relative inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-neutral-200 transition-all duration-300"
                                 >
                                     {feature.cta}
                                 </motion.button>
@@ -77,9 +79,6 @@ export function InfoSection({ className }) {
                                 )}
                             >
                                 <div className="relative group">
-                                    {/* Glow Effect */}
-                                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-
                                     {/* Image Container */}
                                     <div className="relative bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl p-8 border border-neutral-700">
                                         <motion.img
