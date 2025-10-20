@@ -2,7 +2,8 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { NavbarDemo } from "@/components/Navbar";
 import { Features } from "@/components/ui/Features";
-import { FAQ } from "@/components/ui/FAQ";
+import { InfoSection } from "@/components/sections/InfoSection";
+import { FAQ } from "@/components/sections/FAQ";
 import { Footer } from "@/components/ui/Footer";
 
 export default function Home() {
@@ -84,6 +85,9 @@ export default function Home() {
 
         {/* Features Section */}
         <Features />
+
+        {/* Info Section */}
+        <InfoSection />
 
         {/* FAQ Section */}
         <FAQ />
