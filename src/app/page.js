@@ -6,10 +6,8 @@ import { InfoSection } from "@/components/sections/InfoSection";
 import { FAQ } from "@/components/sections/FAQ";
 import { Footer } from "@/components/ui/Footer";
 
+
 export default function Home() {
-
-
-
   return (
     <div className="bg-black relative w-full">
       <NavbarDemo >
@@ -42,8 +40,6 @@ export default function Home() {
           </div>
 
         </BackgroundBeamsWithCollision>
-
-        {/* Partners Section */}
         <div className="relative">
           <img src="/image/hero-gradient.png" className="w-full absolute bottom-0 z-10" />
 
@@ -82,19 +78,10 @@ export default function Home() {
           </div>
 
         </div>
-
-        {/* Features Section */}
         <Features />
-
-        {/* Info Section */}
         <InfoSection />
-
-        {/* FAQ Section */}
         <FAQ />
-
       </NavbarDemo >
-
-      {/* Footer */}
       <Footer />
 
 
