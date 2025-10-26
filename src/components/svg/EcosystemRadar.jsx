@@ -6,78 +6,145 @@ export function EcosystemRadar({ className }) {
     return (
         <div className={cn("relative w-full h-auto", className)}>
             <svg width="1452" height="733" viewBox="0 0 1452 733" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-                {/* Radar Circles with pulse animation */}
+                {/* Radar Circles with rotation and pulse animation */}
                 <motion.g id="radar">
-                    {/* Outer circle */}
+                    {/* Outer circle with rotation */}
                     <motion.circle
                         cx="725.5" cy="639.5" r="457.5"
                         fill="url(#paint0_radial_1_2)"
+                        stroke="url(#radarRing1)"
+                        strokeWidth="2"
+                        strokeDasharray="20 10"
+                        style={{ transformOrigin: "725.5px 639.5px" }}
                         animate={{
                             scale: [1, 1.02, 1],
-                            opacity: [0.6, 0.8, 0.6]
+                            opacity: [0.6, 0.8, 0.6],
+                            rotate: [0, 360]
                         }}
                         transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeInOut"
+                            scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                            opacity: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                            rotate: { duration: 15, repeat: Infinity, ease: "linear" }
                         }}
                     />
 
-                    {/* Middle circle */}
+                    {/* Middle circle with counter-rotation */}
                     <motion.circle
                         cx="726" cy="640" r="366"
                         fill="url(#paint1_radial_1_2)"
+                        stroke="url(#radarRing2)"
+                        strokeWidth="2"
+                        strokeDasharray="15 8"
+                        style={{ transformOrigin: "726px 640px" }}
                         animate={{
                             scale: [1, 1.03, 1],
-                            opacity: [0.7, 1, 0.7]
+                            opacity: [0.7, 1, 0.7],
+                            rotate: [0, -360]
                         }}
                         transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                            delay: 0.5
+                            scale: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+                            opacity: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+                            rotate: { duration: 12, repeat: Infinity, ease: "linear" }
                         }}
                     />
 
-                    {/* Inner circle */}
+                    {/* Inner circle with fast rotation */}
                     <motion.circle
                         cx="726" cy="640" r="280"
                         fill="url(#paint2_radial_1_2)"
+                        stroke="url(#radarRing3)"
+                        strokeWidth="2"
+                        strokeDasharray="10 5"
+                        style={{ transformOrigin: "726px 640px" }}
                         animate={{
                             scale: [1, 1.05, 1],
-                            opacity: [0.8, 1, 0.8]
+                            opacity: [0.8, 1, 0.8],
+                            rotate: [0, 360]
                         }}
                         transition={{
-                            duration: 2.5,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                            delay: 1
+                            scale: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1 },
+                            opacity: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1 },
+                            rotate: { duration: 8, repeat: Infinity, ease: "linear" }
                         }}
                     />
                 </motion.g>
 
-                {/* Rotating radar sweep effect */}
+                {/* Enhanced rotating radar sweep effect */}
                 <motion.g
                     style={{ transformOrigin: "726px 640px" }}
                     animate={{ rotate: [0, 360] }}
                     transition={{
-                        duration: 8,
+                        duration: 6,
                         repeat: Infinity,
                         ease: "linear"
                     }}
                 >
-                    <defs>
-                        <radialGradient id="radarSweep" cx="0" cy="0" r="1">
-                            <stop offset="0%" stopColor="rgba(255,255,255,0.4)" />
-                            <stop offset="30%" stopColor="rgba(255,255,255,0.2)" />
-                            <stop offset="70%" stopColor="rgba(255,255,255,0.05)" />
-                            <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-                        </radialGradient>
-                    </defs>
+                    {/* Primary sweep */}
                     <path
                         d="M 726 640 L 1183.5 640 A 457.5 457.5 0 0 1 904.5 1029.5 Z"
                         fill="url(#radarSweep)"
-                        opacity="0.6"
+                        opacity="0.8"
+                    />
+                    {/* Secondary sweep trail */}
+                    <path
+                        d="M 726 640 L 1183.5 640 A 457.5 457.5 0 0 1 1035.2 883.7 Z"
+                        fill="url(#radarSweepTrail)"
+                        opacity="0.4"
+                    />
+                </motion.g>
+
+                {/* Additional radar rings for depth */}
+                <motion.g style={{ transformOrigin: "726px 640px" }}>
+                    {/* Pulse rings */}
+                    <motion.circle
+                        cx="726" cy="640" r="150"
+                        fill="none"
+                        stroke="url(#radarPulse)"
+                        strokeWidth="3"
+                        strokeOpacity="0.6"
+                        animate={{
+                            r: [150, 280, 150],
+                            strokeOpacity: [0.6, 0, 0.6]
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeOut"
+                        }}
+                    />
+                    <motion.circle
+                        cx="726" cy="640" r="200"
+                        fill="none"
+                        stroke="url(#radarPulse)"
+                        strokeWidth="2"
+                        strokeOpacity="0.4"
+                        animate={{
+                            r: [200, 366, 200],
+                            strokeOpacity: [0.4, 0, 0.4]
+                        }}
+                        transition={{
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "easeOut",
+                            delay: 1
+                        }}
+                    />
+                    <motion.circle
+                        cx="726" cy="640" r="250"
+                        fill="none"
+                        stroke="url(#radarPulse)"
+                        strokeWidth="1"
+                        strokeOpacity="0.3"
+                        animate={{
+                            r: [250, 457.5, 250],
+                            strokeOpacity: [0.3, 0, 0.3]
+                        }}
+                        transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                            ease: "easeOut",
+                            delay: 2
+                        }}
                     />
                 </motion.g>
 
@@ -365,6 +432,43 @@ export function EcosystemRadar({ className }) {
 
                 {/* Gradients and filters */}
                 <defs>
+                    {/* Radar sweep gradients */}
+                    <radialGradient id="radarSweep" cx="0" cy="0" r="1">
+                        <stop offset="0%" stopColor="rgba(255,255,255,0.6)" />
+                        <stop offset="30%" stopColor="rgba(255,255,255,0.3)" />
+                        <stop offset="70%" stopColor="rgba(255,255,255,0.1)" />
+                        <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                    </radialGradient>
+
+                    <radialGradient id="radarSweepTrail" cx="0" cy="0" r="1">
+                        <stop offset="0%" stopColor="rgba(255,255,255,0.3)" />
+                        <stop offset="50%" stopColor="rgba(255,255,255,0.1)" />
+                        <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                    </radialGradient>
+
+                    {/* Radar ring gradients */}
+                    <linearGradient id="radarRing1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.3" />
+                        <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.6" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.3" />
+                    </linearGradient>
+
+                    <linearGradient id="radarRing2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.4" />
+                        <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.7" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.4" />
+                    </linearGradient>
+
+                    <linearGradient id="radarRing3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.5" />
+                        <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.8" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.5" />
+                    </linearGradient>
+
+                    <linearGradient id="radarPulse" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.8" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.2" />
+                    </linearGradient>
                     <filter id="filter0_d_1_2" x="650" y="563" width="141" height="141" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />

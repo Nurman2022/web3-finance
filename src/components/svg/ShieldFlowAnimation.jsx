@@ -215,47 +215,47 @@ export function ShieldFlowAnimation({ className }) {
                 <defs>
                     <linearGradient id="beamGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="transparent" />
-                        <stop offset="30%" stopColor="#60A5FA" stopOpacity="0.8" />
-                        <stop offset="70%" stopColor="#3B82F6" stopOpacity="1" />
+                        <stop offset="30%" stopColor="#FFFFFF" stopOpacity="0.8" />
+                        <stop offset="70%" stopColor="#FFFFFF" stopOpacity="1" />
                         <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
 
                     <linearGradient id="beamGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
                         <stop offset="0%" stopColor="transparent" />
-                        <stop offset="30%" stopColor="#34D399" stopOpacity="0.8" />
-                        <stop offset="70%" stopColor="#10B981" stopOpacity="1" />
+                        <stop offset="30%" stopColor="#FFFFFF" stopOpacity="0.8" />
+                        <stop offset="70%" stopColor="#FFFFFF" stopOpacity="1" />
                         <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
 
                     <linearGradient id="beamGradient3" x1="0%" y1="100%" x2="0%" y2="0%">
                         <stop offset="0%" stopColor="transparent" />
-                        <stop offset="30%" stopColor="#F59E0B" stopOpacity="0.8" />
-                        <stop offset="70%" stopColor="#D97706" stopOpacity="1" />
+                        <stop offset="30%" stopColor="#FFFFFF" stopOpacity="0.8" />
+                        <stop offset="70%" stopColor="#FFFFFF" stopOpacity="1" />
                         <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
 
                     <linearGradient id="beamGradient4" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="transparent" />
-                        <stop offset="30%" stopColor="#EC4899" stopOpacity="0.8" />
-                        <stop offset="70%" stopColor="#DB2777" stopOpacity="1" />
+                        <stop offset="30%" stopColor="#FFFFFF" stopOpacity="0.8" />
+                        <stop offset="70%" stopColor="#FFFFFF" stopOpacity="1" />
                         <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
 
                     <linearGradient id="beamGradient5" x1="100%" y1="0%" x2="0%" y2="0%">
                         <stop offset="0%" stopColor="transparent" />
-                        <stop offset="30%" stopColor="#8B5CF6" stopOpacity="0.8" />
-                        <stop offset="70%" stopColor="#7C3AED" stopOpacity="1" />
+                        <stop offset="30%" stopColor="#FFFFFF" stopOpacity="0.8" />
+                        <stop offset="70%" stopColor="#FFFFFF" stopOpacity="1" />
                         <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
 
                     <linearGradient id="shieldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.5" />
-                        <stop offset="100%" stopColor="#3B82F6" stopOpacity="0.8" />
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.5" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.8" />
                     </linearGradient>
 
                     <linearGradient id="shieldGlow2" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#34D399" stopOpacity="0.4" />
-                        <stop offset="100%" stopColor="#10B981" stopOpacity="0.6" />
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.4" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.6" />
                     </linearGradient>
 
                     <radialGradient id="paint0_radial_28_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(718.085 312.616) rotate(90) scale(312.616)">

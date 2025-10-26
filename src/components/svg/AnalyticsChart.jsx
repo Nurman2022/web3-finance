@@ -20,7 +20,7 @@ export function AnalyticsChart({ className }) {
                 {/* Left Chart Path with Growth Animation */}
                 <motion.path
                     d="M874 378.5L789 275L695 403.5L573.5 393M574 393.5L513.5 524L390.5 308L246.5 458.5L143 369.5L58 425.5"
-                    stroke="#00D4AA"
+                    stroke="#FFFFFF"
                     strokeWidth="3"
                     fill="none"
                     initial={{ pathLength: 0 }}
@@ -31,7 +31,7 @@ export function AnalyticsChart({ className }) {
                         delay: 0.5
                     }}
                     style={{
-                        filter: "drop-shadow(0 0 8px rgba(0, 212, 170, 0.4))"
+                        filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))"
                     }}
                 />
 
@@ -52,7 +52,7 @@ export function AnalyticsChart({ className }) {
                         cx={point.cx}
                         cy={point.cy}
                         r="6"
-                        fill="#00D4AA"
+                        fill="#FFFFFF"
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{
@@ -114,7 +114,7 @@ export function AnalyticsChart({ className }) {
                         x="668.5"
                         y="320"
                         textAnchor="middle"
-                        fill="#00D4AA"
+                        fill="#FFFFFF"
                         fontSize="10"
                         fontFamily="monospace"
                         initial={{ opacity: 0 }}
@@ -139,7 +139,7 @@ export function AnalyticsChart({ className }) {
                 {/* Right Chart Path with Upward Trend */}
                 <motion.path
                     d="M914.5 398.5L980.5 314L1095 328.5L1203 459.5L1305.5 364L1431.5 395H1453"
-                    stroke="#FFB800"
+                    stroke="#9CA3AF"
                     strokeWidth="3"
                     fill="none"
                     initial={{ pathLength: 0 }}
@@ -150,7 +150,7 @@ export function AnalyticsChart({ className }) {
                         delay: 1
                     }}
                     style={{
-                        filter: "drop-shadow(0 0 8px rgba(255, 184, 0, 0.4))"
+                        filter: "drop-shadow(0 0 8px rgba(156, 163, 175, 0.4))"
                     }}
                 />
 
@@ -168,7 +168,7 @@ export function AnalyticsChart({ className }) {
                         cx={point.cx}
                         cy={point.cy}
                         r="6"
-                        fill="#FFB800"
+                        fill="#9CA3AF"
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{
@@ -205,7 +205,7 @@ export function AnalyticsChart({ className }) {
                     >
                         <motion.polygon
                             points="460,200 470,180 480,200"
-                            fill="#00D4AA"
+                            fill="#FFFFFF"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 0.5, delay: 3.5 }}
@@ -214,7 +214,7 @@ export function AnalyticsChart({ className }) {
                             x="470"
                             y="175"
                             textAnchor="middle"
-                            fill="#00D4AA"
+                            fill="#FFFFFF"
                             fontSize="14"
                             fontWeight="bold"
                             initial={{ opacity: 0 }}
@@ -239,7 +239,7 @@ export function AnalyticsChart({ className }) {
                     >
                         <motion.polygon
                             points="1200,200 1210,180 1220,200"
-                            fill="#FFB800"
+                            fill="#9CA3AF"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 0.5, delay: 4 }}
@@ -248,7 +248,7 @@ export function AnalyticsChart({ className }) {
                             x="1210"
                             y="175"
                             textAnchor="middle"
-                            fill="#FFB800"
+                            fill="#9CA3AF"
                             fontSize="14"
                             fontWeight="bold"
                             initial={{ opacity: 0 }}
@@ -267,7 +267,7 @@ export function AnalyticsChart({ className }) {
                         cx={200 + index * 150}
                         cy={400 + Math.sin(index) * 100}
                         r="2"
-                        fill="rgba(0, 212, 170, 0.3)"
+                        fill="rgba(255, 255, 255, 0.3)"
                         animate={{
                             y: [0, -20, 0],
                             opacity: [0.3, 0.8, 0.3]
