@@ -53,8 +53,6 @@ export function InfoSection({ className }) {
                                     </motion.p>
                                 </div>
 
-                                {/* CTA Button */}
-                                {/* <div className="absolute inset-0 bg-white rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div> */}
 
                                 <motion.button
                                     initial={{ opacity: 0, y: 20 }}
@@ -78,26 +76,27 @@ export function InfoSection({ className }) {
                                     feature.reversed && "lg:col-start-1"
                                 )}
                             >
-                                <div className="relative group">
-                                    {/* Image Container */}
-                                    <div className="relative bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl p-8 border border-neutral-700">
-                                        <motion.img
-                                            whileHover={{ scale: 1.05 }}
-                                            transition={{ duration: 0.3 }}
-                                            src={feature.image}
-                                            alt={feature.title}
-                                            className="w-full h-auto object-cover rounded-2xl"
-                                        />
+                                {/* <div className="relative group"> */}
+                                {/* Image Container */}
+                                {/* <div className="relative bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl p-8 border border-neutral-700"> */}
+                                <motion.img
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.3 }}
+                                    src={feature.image}
+                                    alt={feature.title}
+                                    className="w-full h-auto object-cover rounded-2xl"
+                                />
 
-                                        {/* Overlay Gradient */}
-                                        <div className="absolute inset-8 bg-gradient-to-t from-black/20 to-transparent rounded-2xl pointer-events-none"></div>
-                                    </div>
-                                </div>
+                                {/* Overlay Gradient */}
+                                {/* <div className="absolute inset-8 bg-gradient-to-t from-black/20 to-transparent rounded-2xl pointer-events-none"></div> */}
+                                {/* </div> */}
+                                {/* </div> */}
                             </motion.div>
                         </div>
                     </div>
-                ))}
-            </div>
-        </section>
+                ))
+                }
+            </div >
+        </section >
     );
 }
