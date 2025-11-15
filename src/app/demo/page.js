@@ -1,4 +1,5 @@
 import { CardStackLoop } from "@/components/svg/CardStackLoop";
+import { ShieldFlowAnimation } from "@/components/svg/ShieldFlowAnimation";
 
 export default function CardStackDemo() {
     return (
@@ -15,7 +16,7 @@ export default function CardStackDemo() {
                         </p>
                     </div>
                     <div className="bg-white/5 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
-                        <CardStackLoop />
+                        <ShieldFlowAnimation />
                     </div>
                 </div>
             </div>
