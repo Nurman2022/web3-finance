@@ -2,8 +2,8 @@
 import { motion } from "motion/react";
 import { AnalyticsChart } from "../svg/AnalyticsChart";
 import { CardStackLoop } from "../svg/CardStackLoop";
-import { EcosystemRadar } from "../svg/EcosystemRadar";
 import { ShieldFlowAnimation } from "../svg/ShieldFlowAnimation";
+import { RadarPulse } from "../svg/RadarPulse";
 
 export function Features() {
     const features = [
@@ -22,7 +22,7 @@ export function Features() {
         {
             title: "Ecosystem & Partnerships",
             description: "Foster a thriving ecosystem through strategic partnerships, community engagement and support for innovative projects.",
-            component: <EcosystemRadar className="w-full max-w-xs" />,
+            component: <RadarPulse className="w-full max-w-xs" />,
             gridClass: "col-span-1 row-span-1"
         },
         {

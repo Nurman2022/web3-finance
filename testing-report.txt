@@ -1,2 +1,4 @@
 - check color schema that need a variable class
 - many component may need same varian style
+- SVG:
+    * jeda animasi beam bisa divariable kan

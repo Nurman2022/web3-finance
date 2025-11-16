@@ -6,155 +6,73 @@ export function EcosystemRadar({ className }) {
     return (
         <div className={cn("relative w-full h-auto", className)}>
             <svg width="1452" height="733" viewBox="0 0 1452 733" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-                {/* Radar Circles with rotation and pulse animation */}
-                <motion.g id="radar">
-                    {/* Outer circle with rotation */}
+                {/* Radar Circles - Sequential appearance (cumulative) */}
+                <g id="radar">
+                    {/* Outer circle - appears last and stays */}
                     <motion.circle
-                        cx="725.5" cy="639.5" r="457.5"
+                        cx="726" cy="640" r="457.5"
                         fill="url(#paint0_radial_1_2)"
                         stroke="url(#radarRing1)"
                         strokeWidth="2"
-                        strokeDasharray="20 10"
-                        style={{ transformOrigin: "725.5px 639.5px" }}
                         animate={{
-                            scale: [1, 1.02, 1],
-                            opacity: [0.6, 0.8, 0.6],
-                            rotate: [0, 360]
+                            opacity: [0, 0, 0, 0, 0, 0.7, 0.9, 0.7],
+                            scale: [1, 1, 1, 1, 1, 1, 1.01, 1]
                         }}
                         transition={{
-                            scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-                            opacity: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-                            rotate: { duration: 15, repeat: Infinity, ease: "linear" }
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            times: [0, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1]
                         }}
+                        style={{ transformOrigin: "726px 640px" }}
                     />
 
-                    {/* Middle circle with counter-rotation */}
+                    {/* Middle circle - appears second and stays */}
                     <motion.circle
                         cx="726" cy="640" r="366"
                         fill="url(#paint1_radial_1_2)"
                         stroke="url(#radarRing2)"
                         strokeWidth="2"
-                        strokeDasharray="15 8"
-                        style={{ transformOrigin: "726px 640px" }}
                         animate={{
-                            scale: [1, 1.03, 1],
-                            opacity: [0.7, 1, 0.7],
-                            rotate: [0, -360]
+                            opacity: [0, 0, 0.8, 1, 0.8, 0.8, 0.8, 0.8],
+                            scale: [1, 1, 1, 1.015, 1, 1, 1, 1]
                         }}
                         transition={{
-                            scale: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
-                            opacity: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
-                            rotate: { duration: 12, repeat: Infinity, ease: "linear" }
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            times: [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 1]
                         }}
+                        style={{ transformOrigin: "726px 640px" }}
                     />
 
-                    {/* Inner circle with fast rotation */}
+                    {/* Inner circle - appears first and stays */}
                     <motion.circle
                         cx="726" cy="640" r="280"
                         fill="url(#paint2_radial_1_2)"
                         stroke="url(#radarRing3)"
                         strokeWidth="2"
-                        strokeDasharray="10 5"
+                        animate={{
+                            opacity: [0.9, 1, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9],
+                            scale: [1, 1.02, 1, 1, 1, 1, 1, 1]
+                        }}
+                        transition={{
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            times: [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 1]
+                        }}
                         style={{ transformOrigin: "726px 640px" }}
-                        animate={{
-                            scale: [1, 1.05, 1],
-                            opacity: [0.8, 1, 0.8],
-                            rotate: [0, 360]
-                        }}
-                        transition={{
-                            scale: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1 },
-                            opacity: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1 },
-                            rotate: { duration: 8, repeat: Infinity, ease: "linear" }
-                        }}
                     />
-                </motion.g>
+                </g>
 
-                {/* Enhanced rotating radar sweep effect */}
-                <motion.g
-                    style={{ transformOrigin: "726px 640px" }}
-                    animate={{ rotate: [0, 360] }}
-                    transition={{
-                        duration: 6,
-                        repeat: Infinity,
-                        ease: "linear"
-                    }}
-                >
-                    {/* Primary sweep */}
-                    <path
-                        d="M 726 640 L 1183.5 640 A 457.5 457.5 0 0 1 904.5 1029.5 Z"
-                        fill="url(#radarSweep)"
-                        opacity="0.8"
-                    />
-                    {/* Secondary sweep trail */}
-                    <path
-                        d="M 726 640 L 1183.5 640 A 457.5 457.5 0 0 1 1035.2 883.7 Z"
-                        fill="url(#radarSweepTrail)"
-                        opacity="0.4"
-                    />
-                </motion.g>
-
-                {/* Additional radar rings for depth */}
-                <motion.g style={{ transformOrigin: "726px 640px" }}>
-                    {/* Pulse rings */}
-                    <motion.circle
-                        cx="726" cy="640" r="150"
-                        fill="none"
-                        stroke="url(#radarPulse)"
-                        strokeWidth="3"
-                        strokeOpacity="0.6"
-                        animate={{
-                            r: [150, 280, 150],
-                            strokeOpacity: [0.6, 0, 0.6]
-                        }}
-                        transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            ease: "easeOut"
-                        }}
-                    />
-                    <motion.circle
-                        cx="726" cy="640" r="200"
-                        fill="none"
-                        stroke="url(#radarPulse)"
-                        strokeWidth="2"
-                        strokeOpacity="0.4"
-                        animate={{
-                            r: [200, 366, 200],
-                            strokeOpacity: [0.4, 0, 0.4]
-                        }}
-                        transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeOut",
-                            delay: 1
-                        }}
-                    />
-                    <motion.circle
-                        cx="726" cy="640" r="250"
-                        fill="none"
-                        stroke="url(#radarPulse)"
-                        strokeWidth="1"
-                        strokeOpacity="0.3"
-                        animate={{
-                            r: [250, 457.5, 250],
-                            strokeOpacity: [0.3, 0, 0.3]
-                        }}
-                        transition={{
-                            duration: 5,
-                            repeat: Infinity,
-                            ease: "easeOut",
-                            delay: 2
-                        }}
-                    />
-                </motion.g>
-
-                {/* User Circle 1 - Clockwise rotation */}
+                {/* User Circle 1 - Faster scan speed */}
                 <motion.g
                     id="user-circle-1"
                     style={{ transformOrigin: "726px 640px" }}
                     animate={{ rotate: [0, 360] }}
                     transition={{
-                        duration: 20,
+                        duration: 12,
                         repeat: Infinity,
                         ease: "linear"
                     }}
@@ -163,7 +81,7 @@ export function EcosystemRadar({ className }) {
                         style={{ transformOrigin: "836.5px 278.5px" }}
                         animate={{ rotate: [0, -360] }}
                         transition={{
-                            duration: 20,
+                            duration: 12,
                             repeat: Infinity,
                             ease: "linear"
                         }}
@@ -195,13 +113,13 @@ export function EcosystemRadar({ className }) {
                     </motion.g>
                 </motion.g>
 
-                {/* User Circle 2 - Counter-clockwise rotation */}
+                {/* User Circle 2 - Faster scan speed */}
                 <motion.g
                     id="user-circle-2"
                     style={{ transformOrigin: "726px 640px" }}
                     animate={{ rotate: [0, -360] }}
                     transition={{
-                        duration: 25,
+                        duration: 15,
                         repeat: Infinity,
                         ease: "linear"
                     }}
@@ -210,7 +128,7 @@ export function EcosystemRadar({ className }) {
                         style={{ transformOrigin: "998.5px 524.5px" }}
                         animate={{ rotate: [0, 360] }}
                         transition={{
-                            duration: 25,
+                            duration: 15,
                             repeat: Infinity,
                             ease: "linear"
                         }}
@@ -243,13 +161,13 @@ export function EcosystemRadar({ className }) {
                     </motion.g>
                 </motion.g>
 
-                {/* User Circle 3 - Clockwise rotation different speed */}
+                {/* User Circle 3 - Faster scan speed */}
                 <motion.g
                     id="user-circle-3"
                     style={{ transformOrigin: "726px 640px" }}
                     animate={{ rotate: [0, 360] }}
                     transition={{
-                        duration: 30,
+                        duration: 18,
                         repeat: Infinity,
                         ease: "linear"
                     }}
@@ -258,7 +176,7 @@ export function EcosystemRadar({ className }) {
                         style={{ transformOrigin: "1034.5px 259.5px" }}
                         animate={{ rotate: [0, -360] }}
                         transition={{
-                            duration: 30,
+                            duration: 18,
                             repeat: Infinity,
                             ease: "linear"
                         }}
@@ -291,13 +209,13 @@ export function EcosystemRadar({ className }) {
                     </motion.g>
                 </motion.g>
 
-                {/* User Circle 4 - Counter-clockwise rotation */}
+                {/* User Circle 4 - Faster scan speed */}
                 <motion.g
                     id="user-circle-4"
                     style={{ transformOrigin: "726px 640px" }}
                     animate={{ rotate: [0, -360] }}
                     transition={{
-                        duration: 35,
+                        duration: 20,
                         repeat: Infinity,
                         ease: "linear"
                     }}
@@ -306,7 +224,7 @@ export function EcosystemRadar({ className }) {
                         style={{ transformOrigin: "408.5px 543.5px" }}
                         animate={{ rotate: [0, 360] }}
                         transition={{
-                            duration: 35,
+                            duration: 20,
                             repeat: Infinity,
                             ease: "linear"
                         }}
@@ -339,13 +257,13 @@ export function EcosystemRadar({ className }) {
                     </motion.g>
                 </motion.g>
 
-                {/* User Circle 5 - Clockwise rotation */}
+                {/* User Circle 5 - Faster scan speed */}
                 <motion.g
                     id="user-circle-5"
                     style={{ transformOrigin: "726px 640px" }}
                     animate={{ rotate: [0, 360] }}
                     transition={{
-                        duration: 40,
+                        duration: 22,
                         repeat: Infinity,
                         ease: "linear"
                     }}
@@ -354,7 +272,7 @@ export function EcosystemRadar({ className }) {
                         style={{ transformOrigin: "604.5px 287.5px" }}
                         animate={{ rotate: [0, -360] }}
                         transition={{
-                            duration: 40,
+                            duration: 22,
                             repeat: Infinity,
                             ease: "linear"
                         }}
@@ -480,12 +398,12 @@ export function EcosystemRadar({ className }) {
                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape" />
                     </filter>
 
-                    <radialGradient id="paint0_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(725.5 639.5) rotate(92.6422) scale(457.5)">
+                    <radialGradient id="paint0_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(726 640) rotate(90) scale(457.5)">
                         <stop offset="0.576923" stopColor="#1A1A1A" />
                         <stop offset="1" stopColor="#3A3A3A" />
                     </radialGradient>
 
-                    <radialGradient id="paint1_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(726 640) rotate(92.6422) scale(366)">
+                    <radialGradient id="paint1_radial_1_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(726 640) rotate(90) scale(366)">
                         <stop offset="0.58" stopColor="#1A1A1A" />
                         <stop offset="1" stopColor="#3A3A3A" />
                     </radialGradient>
