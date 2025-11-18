@@ -212,15 +212,15 @@ export const NavbarButton = ({
     ...props
 }) => {
     const baseStyles =
-        "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+        "text-sm relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
     const variantStyles = {
         primary:
-            "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
-        secondary: "bg-transparent shadow-none dark:text-white",
-        dark: "p-0.5 bg-gradient-to-b from-neutral-400 to-neutral-800 rounded-[10px] border border-neutral-700 transition-all duration-150 ease-in-out",
+            "px-4 py-2 rounded-md bg-white text-black shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+        secondary: "px-4 py-2 rounded-md bg-transparent shadow-none dark:text-white",
+        dark: "inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-neutral-400/20 to-neutral-800/20 border border-neutral-700 px-4 py-2 text-neutral-300",
         gradient:
-            "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
+            "px-4 py-2 rounded-md bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
     };
 
     return (
@@ -228,13 +228,7 @@ export const NavbarButton = ({
             href={href || undefined}
             className={cn(baseStyles, variantStyles[variant], className)}
             {...props}>
-            {variant === "dark" ? (
-                <span className="flex px-4 py-2 bg-gray-800 text-white rounded-[8px] w-full h-full items-center justify-center">
-                    {children}
-                </span>
-            ) : (
-                children
-            )}
+            {children}
         </Tag>
     );
 };

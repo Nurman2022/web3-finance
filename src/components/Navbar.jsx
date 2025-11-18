@@ -11,6 +11,7 @@ import {
     MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { User } from "lucide-react";
 
 export function NavbarDemo({ children }) {
     const navItems = [
@@ -45,7 +46,7 @@ export function NavbarDemo({ children }) {
                 <NavBody>
                     <NavbarLogo />
                     <NavItems items={navItems} />
-                    <NavbarButton variant="dark">Create Account</NavbarButton>
+                    <NavbarButton variant="dark"> <User size={20} /> Create Account</NavbarButton>
                 </NavBody>
 
                 {/* Mobile Navigation */}
