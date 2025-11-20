@@ -7,14 +7,8 @@ export function InfoSection({ className }) {
 
 
     return (
-        <section className={cn("bg-gradient-to-b from-[#0a0a0a] to-[#171717] relative w-full overflow-hidden py-20", className)}>
-            <div
-                className={cn(
-                    "absolute inset-0 opacity-10",
-                    "[background-size:150px_150px]",
-                    "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
-                    "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
-                )} />
+        // <section className={cn("bg-gradient-to-b from-[#0a0a0a] to-[#171717] relative w-full overflow-hidden py-20", className)}>
+        <section className="overflow-hidden w-full relative py-20">
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 {features.map((feature, index) => (
@@ -38,7 +32,7 @@ export function InfoSection({ className }) {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.6, delay: 0.1 }}
-                                        className="text-4xl lg:text-5xl font-light text-white leading-tight mb-6"
+                                        className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl"
                                     >
                                         {feature.title}
                                     </motion.h2>
@@ -76,9 +70,7 @@ export function InfoSection({ className }) {
                                     feature.reversed && "lg:col-start-1"
                                 )}
                             >
-                                {/* <div className="relative group"> */}
-                                {/* Image Container */}
-                                {/* <div className="relative bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl p-8 border border-neutral-700"> */}
+
                                 <motion.img
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3 }}
@@ -87,10 +79,6 @@ export function InfoSection({ className }) {
                                     className="w-full h-auto object-cover rounded-2xl"
                                 />
 
-                                {/* Overlay Gradient */}
-                                {/* <div className="absolute inset-8 bg-gradient-to-t from-black/20 to-transparent rounded-2xl pointer-events-none"></div> */}
-                                {/* </div> */}
-                                {/* </div> */}
                             </motion.div>
                         </div>
                     </div>

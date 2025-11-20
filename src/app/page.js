@@ -22,18 +22,18 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent sm:text-7xl max-w-5xl">
+            <h1 className="relative z-20 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl max-w-5xl">
               Revolutionize Your Transactions With Secure Blockchain Solutions
             </h1>
 
             {/* Description */}
-            <p className="mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg">
+            <p className="mt-4 max-w-4xl text-base text-neutral-400 sm:text-lg">
               Experience the future of digital transactions with our state-of-the-art blockchain technology. Our secure,
               decentralized platform ensures every transaction is transparent, immutable, and protected against fraud.
             </p>
 
             {/* CTA Button */}
-            <button className="mt-8 rounded-full bg-white px-8 py-3 text-base font-medium text-black transition-all hover:bg-neutral-200">
+            <button className="mt-8 rounded-full bg-white px-8 py-3 text-base font-semibold text-black transition-all hover:bg-neutral-200">
               Get Started
             </button>
 
@@ -41,7 +41,7 @@ export default function Home() {
 
         </BackgroundBeamsWithCollision>
         <div className="relative">
-          <img src="/image/hero-gradient.png" className="w-full absolute bottom-0 z-10" />
+          <img src="/image/hero-gradient.png" className="w-full absolute bottom-0 z-10 h-[32rem]" />
 
           <div className="relative flex flex-col items-center z-20 -top-20">
             <div className="mb-8">
@@ -78,9 +78,20 @@ export default function Home() {
           </div>
 
         </div>
-        <Features />
-        <InfoSection />
-        <FAQ />
+
+
+        {/* <div className="bg-gradient-to-b from-[#050505] via-[#1a1a1a] to-[#292929]"> */}
+        <div className="bg-gradient-to-r from-[#292929] via-[#050505] to-[#292929]">
+
+
+          <div className="relative z-20">
+
+            <Features />
+            <InfoSection />
+            <FAQ />
+          </div>
+        </div>
+
       </NavbarDemo >
       <Footer />
     </div>

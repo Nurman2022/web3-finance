@@ -25,14 +25,14 @@ export function FAQ() {
     };
 
     return (
-        <section className="bg-[#101010] relative w-full overflow-hidden py-20">
-            <div
+        <section className=" relative w-full overflow-hidden py-20">
+            {/* <div
                 className={cn(
                     "absolute inset-0 opacity-20",
                     "[background-size:150px_150px]",
                     "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
                     "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
-                )} />
+                )} /> */}
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 {/* Header Section */}
@@ -42,7 +42,7 @@ export function FAQ() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight mb-6"
+                            className="md:text-5xl mb-6 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl"
                         >
                             Have a Questions?<br />
                             We've Got Your Answers.

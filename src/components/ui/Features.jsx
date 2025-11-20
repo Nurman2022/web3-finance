@@ -34,7 +34,7 @@ export function Features() {
     ];
 
     return (
-        <div className="py-20 bg-black relative">
+        <div className="py-20 relative">
             <div className="relative z-10 max-w-7xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -43,7 +43,7 @@ export function Features() {
                             Our Features
                         </span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-light text-white mb-4">
+                    <h2 className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl">
                         Innovative Features of Webtrix
                     </h2>
                     <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
