@@ -16,32 +16,32 @@ export function ShieldFlowAnimation({ className }) {
                 {/* Background paths - static dimmed */}
                 <path
                     d="M1031 379H1178.91L1440.67 625.36"
-                    stroke="#333"
-                    strokeWidth="1"
+                    stroke="#898989"
+                    strokeWidth="3"
                     opacity="0.3"
                 />
                 <path
                     d="M401.269 379H264.091L0 612.762"
-                    stroke="#333"
-                    strokeWidth="1"
+                    stroke="#898989"
+                    strokeWidth="3"
                     opacity="0.3"
                 />
                 <line
                     x1="727" y1="628" x2="727" y2="1044"
-                    stroke="#333"
-                    strokeWidth="1"
+                    stroke="#898989"
+                    strokeWidth="3"
                     opacity="0.3"
                 />
                 <line
                     x1="412.003" y1="308.315" x2="0.468852" y2="310.181"
-                    stroke="#333"
-                    strokeWidth="1"
+                    stroke="#898989"
+                    strokeWidth="3"
                     opacity="0.3"
                 />
                 <line
                     x1="1031" y1="309.176" x2="1447.2" y2="307.31"
-                    stroke="#333"
-                    strokeWidth="1"
+                    stroke="#898989"
+                    strokeWidth="3"
                     opacity="0.3"
                 />
 
