@@ -71,12 +71,14 @@ export const BackgroundBeamsWithCollision = ({
     ];
 
     return (
+
         <div
             ref={parentRef}
             className={cn(
-                "h-screen bg-gradient-to-b from-neutral-950 to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
+                "h-screen bg-gradient-to-b from-neutral-950 to-neutral-800  relative flex items-center w-full justify-center overflow-hidden",
                 className
             )}>
+
             <div
                 className={cn(
                     "absolute inset-0",
@@ -85,13 +87,15 @@ export const BackgroundBeamsWithCollision = ({
                     "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
                 )} />
 
-            {beams.map((beam) => (
-                <CollisionMechanism
-                    key={beam.initialX + "beam-idx"}
-                    beamOptions={beam}
-                    containerRef={containerRef}
-                    parentRef={parentRef} />
-            ))}
+            {
+                beams.map((beam) => (
+                    <CollisionMechanism
+                        key={beam.initialX + "beam-idx"}
+                        beamOptions={beam}
+                        containerRef={containerRef}
+                        parentRef={parentRef} />
+                ))
+            }
             {children}
 
         </div>

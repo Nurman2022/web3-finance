@@ -65,12 +65,7 @@ export function Features() {
                                 className={feature.gridClass}
                             >
                                 <div className="relative group h-full w-full">
-                                    <div className="relative h-full w-full min-h-[300px] rounded-3xl border border-neutral-800 bg-gradient-to-br from-neutral-900/50 to-neutral-950/80 overflow-hidden backdrop-blur-sm hover:border-neutral-700 transition-all duration-500 hover:scale-[1.02]">
-                                        {/* Background Pattern */}
-                                        <div className="absolute inset-0 opacity-5">
-                                            <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_35%,rgba(255,255,255,.1)_50%,transparent_65%)] bg-[length:20px_20px]"></div>
-                                        </div>
-
+                                    <div className="relative h-full w-full min-h-[300px] rounded-3xl border border-neutral-800 overflow-hidden transition-all duration-700 ease-in-out bg-gradient-to-br from-[#292929] to-[#050505] from-20% group-hover:bg-gradient-to-t group-hover:from-40%">
                                         <div className="relative z-10 h-full flex flex-col p-6">
                                             <div className="mb-4">
                                                 <h3 className="text-xl font-light text-white mb-2">{feature.title}</h3>
@@ -85,9 +80,6 @@ export function Features() {
                                                 </div>
                                             </div>
                                         </div>
-
-                                        {/* Hover Glow Effect */}
-                                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
                             </motion.div>

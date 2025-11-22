@@ -2,3 +2,4 @@
 - many component may need same varian style
 - SVG:
     * jeda animasi beam bisa divariable kan
+- untuk feature section bisa pake variasi collumne | bento

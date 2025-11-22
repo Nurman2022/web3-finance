@@ -1,15 +1,39 @@
 'use client'
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { NavbarDemo } from "@/components/Navbar";
-import { Features } from "@/components/ui/Features";
+import { Features } from "@/components/sections/Features";
 import { InfoSection } from "@/components/sections/InfoSection";
 import { FAQ } from "@/components/sections/FAQ";
-import { Footer } from "@/components/ui/Footer";
+import { Footer } from "@/components/sections/Footer";
 
 
 export default function Home() {
   return (
-    <div className="bg-black relative w-full">
+    <div className="bg-black relative w-full overflow-hidden">
+      {/* Gradient Dots Background */}
+      <div className="fixed inset-0 pointer-events-none z-40">
+        {/* Top Left */}
+        <div className="absolute top-20 -left-96 w-[900px] h-[1000px] bg-neutral-500/10 rounded-full blur-[130px]" />
+
+        {/* Top Right */}
+        <div className="absolute top-40 -right-50 w-[400px] h-[400px] bg-neutral-500/10 rounded-full blur-[100px]" />
+
+        {/* Middle Left */}
+        {/* <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-neutral-500/10 rounded-full blur-[90px]" /> */}
+
+        {/* Center */}
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neutral-200/8 rounded-full blur-[150px]" /> */}
+
+        {/* Middle Right */}
+        {/* <div className="absolute top-2/3 right-10 w-[450px] h-[450px] bg-neutral-400/12 rounded-full blur-[110px]" /> */}
+
+        {/* Bottom Left */}
+        {/* <div className="absolute bottom-40 left-1/3 w-[400px] h-[400px] bg-neutral-300/15 rounded-full blur-[100px]" /> */}
+
+        {/* Bottom Right */}
+        {/* <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] bg-neutral-500/18 rounded-full blur-[130px]" /> */}
+      </div>
+
       <NavbarDemo >
         <BackgroundBeamsWithCollision className={"-mt-16"}>
 
@@ -50,7 +74,7 @@ export default function Home() {
               </span>
             </div>
 
-            <h2 className="mb-12 text-2xl font-light text-white sm:text-4xl">
+            <h2 className="mb-12 text-2xl font-light sm:text-4xl bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-transparent">
               Leading the Way in Crypto Trust with Webtrix
             </h2>
 
