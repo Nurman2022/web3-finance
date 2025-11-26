@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "motion/react";
-import { AnalyticsChart } from "../svg/AnalyticsChart";
-import { CardStackLoop } from "../svg/CardStackLoop";
-import { ShieldFlowAnimation } from "../svg/ShieldFlowAnimation";
-import { RadarPulse } from "../svg/RadarPulse";
+import { AnalyticsChart } from "../illustrations/AnalyticsChart";
+import { CardStackLoop } from "../illustrations/CardStackLoop";
+import { ShieldFlowAnimation } from "../illustrations/ShieldFlowAnimation";
+import { RadarPulse } from "../illustrations/RadarPulse";
 
 export function Features() {
     const features = [

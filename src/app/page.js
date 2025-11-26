@@ -5,39 +5,16 @@ import { Features } from "@/components/sections/Features";
 import { InfoSection } from "@/components/sections/InfoSection";
 import { FAQ } from "@/components/sections/FAQ";
 import { Footer } from "@/components/sections/Footer";
+import { Partners } from "@/components/sections/Partners";
+import { HeroGradientCircle } from "@/components/ui/HeroGradientCircle";
 
 
 export default function Home() {
   return (
-    <div className="bg-black relative w-full overflow-hidden">
-      {/* Gradient Dots Background */}
-      <div className="fixed inset-0 pointer-events-none z-40">
-        {/* Top Left */}
-        <div className="absolute top-20 -left-96 w-[900px] h-[1000px] bg-neutral-500/10 rounded-full blur-[130px]" />
-
-        {/* Top Right */}
-        <div className="absolute top-40 -right-50 w-[400px] h-[400px] bg-neutral-500/10 rounded-full blur-[100px]" />
-
-        {/* Middle Left */}
-        {/* <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-neutral-500/10 rounded-full blur-[90px]" /> */}
-
-        {/* Center */}
-        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neutral-200/8 rounded-full blur-[150px]" /> */}
-
-        {/* Middle Right */}
-        {/* <div className="absolute top-2/3 right-10 w-[450px] h-[450px] bg-neutral-400/12 rounded-full blur-[110px]" /> */}
-
-        {/* Bottom Left */}
-        {/* <div className="absolute bottom-40 left-1/3 w-[400px] h-[400px] bg-neutral-300/15 rounded-full blur-[100px]" /> */}
-
-        {/* Bottom Right */}
-        {/* <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] bg-neutral-500/18 rounded-full blur-[130px]" /> */}
-      </div>
-
-      <NavbarDemo >
-        <BackgroundBeamsWithCollision className={"-mt-16"}>
-
-          <div className="relative z-20 flex flex-col items-center justify-center px-4 text-center h-screen">
+    <NavbarDemo >
+      <div className="relative w-full overflow-hidden -mt-20">
+        <BackgroundBeamsWithCollision>
+          <div className="relative z-20 flex flex-col items-center justify-center px-4 text-center">
             {/* Badge */}
             <div className="mb-8">
               <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-b from-neutral-400/20 to-neutral-800/20 border border-neutral-700 px-4 py-2 text-sm text-neutral-300">
@@ -46,7 +23,7 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="relative z-20 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl max-w-5xl">
+            <h1 className="z-20 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl max-w-5xl">
               Revolutionize Your Transactions With Secure Blockchain Solutions
             </h1>
 
@@ -64,61 +41,57 @@ export default function Home() {
           </div>
 
         </BackgroundBeamsWithCollision>
-        <div className="relative">
-          <img src="/image/hero-gradient.png" className="w-full absolute bottom-0 z-10 h-[32rem]" />
 
-          <div className="relative flex flex-col items-center z-20 -top-20">
-            <div className="mb-8">
-              <span className="inline-flex items-center rounded-full border border-neutral-700 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
-                Our Partners
-              </span>
+        <HeroGradientCircle>
+
+          <div className="absolute inset-0 pointer-events-none z-40">
+            {/* Top Left */}
+            <div className="absolute top-1/2 -left-96 w-[900px] h-[1000px] bg-neutral-400/20 rounded-full blur-[130px]" />
+
+            {/* Top Right */}
+            <div className="absolute top-3/4 -right-50 w-[400px] h-[400px] bg-neutral-400/20 rounded-full blur-[100px]" />
+
+            {/* Left block */}
+            <div className="absolute top-[15%] left-0 ">
+              <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
+              <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
             </div>
 
-            <h2 className="mb-12 text-2xl font-light sm:text-4xl bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-transparent">
-              Leading the Way in Crypto Trust with Webtrix
-            </h2>
 
-            {/* Partner Logos */}
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              <div className="flex h-20 w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 hover:bg-white hover:scale-105 transition-all duration-300 group">
-                <img src="/image/tron-logo.png" alt="TRON" className="h-auto w-auto object-cover filter brightness-0 invert group-hover:filter-none transition-all duration-300" />
-              </div>
-              <div className="flex h-20 w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 hover:bg-white hover:scale-105 transition-all duration-300 group">
-                <img src="/image/cosmos-logo.png" alt="COSMOS" className="h-auto w-auto object-cover filter brightness-0 invert group-hover:filter-none transition-all duration-300" />
-              </div>
-              <div className="flex h-20 w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 hover:bg-white hover:scale-105 transition-all duration-300 group">
-                <img src="/image/stellar-logo.png" alt="Stellar" className="h-auto w-auto object-cover filter brightness-0 invert group-hover:filter-none transition-all duration-300" />
-              </div>
-              <div className="flex h-20 w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 hover:bg-white hover:scale-105 transition-all duration-300 group">
-                <img src="/image/okx-logo.png" alt="OKX" className="h-auto w-auto object-cover filter brightness-0 invert group-hover:filter-none transition-all duration-300" />
-              </div>
-              <div className="flex h-20 w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 hover:bg-white hover:scale-105 transition-all duration-300 group">
-                <img src="/image/ethereum-logo.png" alt="Ethereum" className="h-auto w-auto object-cover filter brightness-0 invert group-hover:filter-none transition-all duration-300" />
-              </div>
-              <div className="flex h-20 w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 hover:bg-white hover:scale-105 transition-all duration-300 group">
-                <img src="/image/vechain-logo.png" alt="VeChain" className="h-auto w-auto object-cover filter brightness-0 invert group-hover:filter-none transition-all duration-300" />
-              </div>
+            {/* Right block */}
+            <div className="absolute top-[15%] right-0 scale-x-[-1]">
+              <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
+              <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
             </div>
+
+
+
+            {/* Middle Left */}
+            {/* <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-neutral-500/10 rounded-full blur-[90px]" /> */}
+
+            {/* Center */}
+            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neutral-200/8 rounded-full blur-[150px]" /> */}
+            {/* Center */}
+            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neutral-200/8 rounded-full blur-[150px]" /> */}
+
+            {/* Middle Right */}
+            {/* <div className="absolute top-2/3 right-10 w-[450px] h-[450px] bg-neutral-400/12 rounded-full blur-[110px]" /> */}
+
+            {/* Bottom Left */}
+            {/* <div className="absolute bottom-40 left-1/3 w-[400px] h-[400px] bg-neutral-300/15 rounded-full blur-[100px]" /> */}
+
+            {/* Bottom Right */}
+            {/* <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] bg-neutral-500/18 rounded-full blur-[130px]" /> */}
           </div>
+          <Partners />
+          <Features />
+          <InfoSection />
+          <FAQ />
+        </HeroGradientCircle>
 
-        </div>
-
-
-        {/* <div className="bg-gradient-to-b from-[#050505] via-[#1a1a1a] to-[#292929]"> */}
-        <div className="bg-gradient-to-r from-[#292929] via-[#050505] to-[#292929]">
-
-
-          <div className="relative z-20">
-
-            <Features />
-            <InfoSection />
-            <FAQ />
-          </div>
-        </div>
-
-      </NavbarDemo >
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </NavbarDemo >
   );
 }
 
