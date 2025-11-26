@@ -67,15 +67,18 @@ export function CardStackLoop({ className }) {
                             opacity: { duration: 0.4 },
                         }}
                     >
-                        {/* SVG Card Image */}
-                        <Image
-                            src={card.svg}
-                            alt={card.name}
-                            width={666}
-                            height={418}
-                            className="w-full h-full object-cover"
-                            priority
-                        />
+                        <div className="bg-neutral-300/10 backdrop-blur-sm size-full">
+                            <Image
+                                src={card.svg}
+                                alt={card.name}
+                                width={666}
+                                height={418}
+                                className="w-full h-full object-cover"
+                                priority
+                            />
+                        </div>
+
+
                     </motion.div>
                 );
             })}

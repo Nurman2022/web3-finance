@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import { features } from "@/data/feature";
 
 export function InfoSection({ className }) {
-
-
     return (
         // <section className={cn("bg-gradient-to-b from-[#0a0a0a] to-[#171717] relative w-full overflow-hidden py-20", className)}>
         <section className="overflow-hidden w-full relative py-20">
@@ -70,7 +68,6 @@ export function InfoSection({ className }) {
                                     feature.reversed && "lg:col-start-1"
                                 )}
                             >
-
                                 <motion.img
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3 }}

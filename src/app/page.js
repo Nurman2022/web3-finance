@@ -43,7 +43,6 @@ export default function Home() {
         </BackgroundBeamsWithCollision>
 
         <HeroGradientCircle>
-
           <div className="absolute inset-0 pointer-events-none z-40">
             {/* Top Left */}
             <div className="absolute top-1/2 -left-96 w-[900px] h-[1000px] bg-neutral-400/20 rounded-full blur-[130px]" />

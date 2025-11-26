@@ -3,3 +3,4 @@
 - SVG:
     * jeda animasi beam bisa divariable kan
 - untuk feature section bisa pake variasi collumne | bento
+- cek semua import "cn" dan variable "className"
