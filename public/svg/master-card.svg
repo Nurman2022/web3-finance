@@ -24,20 +24,6 @@
 </clipPath><clipPath id="bgblur_2_44_2_clip_path" transform="translate(-536.769 -8.57024)"><path d="M621.198 63.0004C621.198 79.5688 607.767 93 591.199 93C574.63 93 561.199 79.5688 561.199 63.0004C561.199 46.4321 574.63 33.0009 591.199 33.0009C607.767 33.0009 621.198 46.4321 621.198 63.0004Z"/>
 </clipPath><clipPath id="bgblur_3_44_2_clip_path" transform="translate(-536.769 -15.03)"><path d="M572.599 39.4606C565.655 44.9551 561.199 53.4572 561.199 62.9999C561.199 72.5425 565.655 81.0446 572.599 86.5391C579.543 81.0446 583.999 72.5425 583.999 62.9999C583.999 53.4572 579.543 44.9551 572.599 39.4606Z"/>
 </clipPath>
-<radialGradient id="paint1_radial_44_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(58.0258) scale(778.039 485.685)">
-<stop stop-color="white" stop-opacity="0.7"/>
-<stop offset="0.677083" stop-color="#B691FF" stop-opacity="0.4"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-<linearGradient id="paint2_linear_44_2" x1="400.5" y1="649" x2="206" y2="330" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="0.0208333" stop-color="#979797"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint3_linear_44_2" x1="407" y1="5.00002" x2="214.5" y2="330" gradientUnits="userSpaceOnUse">
-<stop stop-color="#53555E"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
 <linearGradient id="paint6_linear_44_2" x1="535" y1="368.5" x2="621" y2="368.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="white" stop-opacity="0.4"/>
 <stop offset="1" stop-color="white" stop-opacity="0.1"/>

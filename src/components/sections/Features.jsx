@@ -33,7 +33,7 @@ export function Features() {
         {
             title: "Secure Payment Solutions",
             description: "Manage and trade with our premium crypto cards. Experience seamless transactions designed for the future of finance.",
-            component: <CardStackLoop className="left-0 top-72" />,
+            component: <CardStackLoop className="" />,
             icon: CreditCard,
             gridClass: "col-span-3 row-span-1"
         },

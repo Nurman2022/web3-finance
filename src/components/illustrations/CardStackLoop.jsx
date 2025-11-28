@@ -6,9 +6,7 @@ import Image from "next/image";
 
 export function CardStackLoop({ className }) {
     const [activeIndex, setActiveIndex] = useState(0);
-    const offset = 60; // Offset untuk posisi stack
-
-    // Data kartu dengan SVG files
+    const offset = 35; // offset between cards
     const cards = [
         {
             id: 1,
@@ -36,26 +34,25 @@ export function CardStackLoop({ className }) {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prev) => (prev + 1) % cards.length);
-        }, 3000); // Ganti kartu setiap 3 detik
+        }, 5000); // card change every 5 seconds
 
         return () => clearInterval(interval);
     }, [cards.length]);
 
     return (
-        <div>
+        <div className="relative -top-[80%] scale-[160%] -left-10">
             {cards.map((card, index) => {
-                // Hitung posisi relatif terhadap kartu aktif
                 const relativeIndex = (index - activeIndex + cards.length) % cards.length;
                 const isActive = index === activeIndex;
-
                 return (
+
                     <motion.div
                         key={card.id}
                         className={cn("absolute w-48 h-28 rounded-xl overflow-hidden", className)}
                         initial={false}
                         animate={{
-                            x: relativeIndex * offset,
-                            y: -relativeIndex * offset,
+                            x: -relativeIndex * offset,
+                            y: relativeIndex * offset,
                             scale: isActive ? 0 : 1,
                             opacity: isActive ? 0 : 1,
                             zIndex: cards.length - relativeIndex,
@@ -71,15 +68,14 @@ export function CardStackLoop({ className }) {
                             <Image
                                 src={card.svg}
                                 alt={card.name}
-                                width={666}
-                                height={418}
-                                className="w-full h-full object-cover"
+                                width={192}
+                                height={112}
+                                className="w-full h-full object-fill"
                                 priority
                             />
                         </div>
-
-
                     </motion.div>
+
                 );
             })}
         </div>

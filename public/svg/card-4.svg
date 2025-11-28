@@ -16,21 +16,6 @@
 </clipPath><pattern id="pattern0_44_2" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_44_2" transform="scale(0.002)"/>
 </pattern>
-<radialGradient id="paint1_radial_44_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(58.0258) scale(778.039 485.685)">
-<stop stop-color="white" stop-opacity="0.7"/>
-<stop offset="0.677083" stop-color="#B691FF" stop-opacity="0.4"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-<linearGradient id="paint2_linear_44_2" x1="400.5" y1="649" x2="206" y2="330" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="0.0208333" stop-color="#979797"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint3_linear_44_2" x1="407" y1="5.00002" x2="214.5" y2="330" gradientUnits="userSpaceOnUse">
-<stop stop-color="#53555E"/>
-<stop offset="1" stop-color="white" stop-opacity="0"/>
-</linearGradient>
-
 <linearGradient id="paint6_linear_44_2" x1="535" y1="368.5" x2="621" y2="368.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="white" stop-opacity="0.4"/>
 <stop offset="1" stop-color="white" stop-opacity="0.1"/>

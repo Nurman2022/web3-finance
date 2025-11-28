@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 
 export function OrbitUsers() {
     return (
-        // <div className="h-[500px] w-[500px] border border-white/10 mx-auto flex justify-center items-center bg-neutral-700">
         <div className="flex items-center justify-center relative w-full h-full top-24">
             <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-96 rounded-full bg-radial from-[#1A1A1A] from-[30%] to-[#3A3A3A] shadow-2xl shadow-[#1A1A1A]"
@@ -40,8 +39,6 @@ export function OrbitUsers() {
                 </motion.div>
             </div>
         </div>
-
-        // </div >
     )
 
 
