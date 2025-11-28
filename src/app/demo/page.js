@@ -1,4 +1,4 @@
-import { OrbitUsers } from "@/components/illustrations/OrbitUsers";
+import { OrbitUsers } from "@/components/illustrations/orbit-users";
 
 
 export default function CardStackDemo() {

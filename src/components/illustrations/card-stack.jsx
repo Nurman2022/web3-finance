@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export function CardStackLoop({ className }) {
+export function CardStack({ className }) {
     const [activeIndex, setActiveIndex] = useState(0);
     const offset = 35; // offset between cards
     const cards = [

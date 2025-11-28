@@ -1,8 +1,6 @@
 'use client';
 import { motion } from "motion/react";
 
-
-
 export function OrbitUsers() {
     return (
         <div className="flex items-center justify-center relative w-full h-full top-24">

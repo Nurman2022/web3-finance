@@ -43,45 +43,6 @@ export default function Home() {
         </BackgroundBeamsWithCollision>
 
         <HeroGradientCircle>
-          <div className="absolute inset-0 pointer-events-none z-40">
-            {/* Top Left */}
-            <div className="absolute top-1/2 -left-96 w-[900px] h-[1000px] bg-neutral-400/20 rounded-full blur-[130px]" />
-
-            {/* Top Right */}
-            <div className="absolute top-3/4 -right-50 w-[400px] h-[400px] bg-neutral-400/20 rounded-full blur-[100px]" />
-
-            {/* Left block */}
-            <div className="absolute top-[15%] left-0 ">
-              <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
-              <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
-            </div>
-
-
-            {/* Right block */}
-            <div className="absolute top-[15%] right-0 scale-x-[-1]">
-              <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
-              <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
-            </div>
-
-
-
-            {/* Middle Left */}
-            {/* <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-neutral-500/10 rounded-full blur-[90px]" /> */}
-
-            {/* Center */}
-            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neutral-200/8 rounded-full blur-[150px]" /> */}
-            {/* Center */}
-            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neutral-200/8 rounded-full blur-[150px]" /> */}
-
-            {/* Middle Right */}
-            {/* <div className="absolute top-2/3 right-10 w-[450px] h-[450px] bg-neutral-400/12 rounded-full blur-[110px]" /> */}
-
-            {/* Bottom Left */}
-            {/* <div className="absolute bottom-40 left-1/3 w-[400px] h-[400px] bg-neutral-300/15 rounded-full blur-[100px]" /> */}
-
-            {/* Bottom Right */}
-            {/* <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] bg-neutral-500/18 rounded-full blur-[130px]" /> */}
-          </div>
           <Partners />
           <Features />
           <InfoSection />
