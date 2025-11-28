@@ -3,8 +3,8 @@ import { motion } from "motion/react";
 import { AnalyticsChart } from "../illustrations/AnalyticsChart";
 import { CardStackLoop } from "../illustrations/CardStackLoop";
 import { ShieldFlowAnimation } from "../illustrations/ShieldFlowAnimation";
-import { RadarPulse } from "../illustrations/RadarPulse";
 import { Activity, Shield, UsersRound, CreditCard } from "lucide-react";
+import { OrbitUsers } from "../illustrations/OrbitUsers";
 
 export function Features() {
     const features = [
@@ -25,7 +25,7 @@ export function Features() {
         {
             title: "Ecosystem & Partnerships",
             description: "Foster a thriving ecosystem through strategic partnerships, community engagement and support for innovative projects.",
-            component: <RadarPulse className="w-full max-w-xs" />,
+            component: <OrbitUsers className="w-full max-w-xs" />,
             icon: UsersRound,
             gridClass: "col-span-2 row-span-1"
             // the really match animation https://notus-agent-marketing-template.vercel.app/
