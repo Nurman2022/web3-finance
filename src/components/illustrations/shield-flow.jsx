@@ -11,8 +11,8 @@ export function ShieldFlowAnimation({ className }) {
     const beam5Id = useId();
 
     return (
-        <div className={cn("relative w-full h-auto", className)}>
-            <svg width="1448" height="1044" viewBox="0 0 1448 1044" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+        <div className={cn("w-full h-full", className)}>
+            <svg width="1448" height="1044" viewBox="0 0 1448 1044" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
                 {/* Background paths - static dimmed */}
                 <path
                     d="M1031 379H1178.91L1440.67 625.36"
@@ -45,7 +45,6 @@ export function ShieldFlowAnimation({ className }) {
                     opacity="0.3"
                 />
 
-                {/* Animated beam paths - Using animated gradient technique */}
                 {/* Beam 1 - Top right diagonal */}
                 <path
                     d="M1031 379H1178.91L1440.67 625.36"

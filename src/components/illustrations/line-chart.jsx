@@ -142,7 +142,6 @@ export function LineChart() {
                     </g>
                 </g>
 
-                {/* Dot untuk Vector 1 dan Vector 2 - hanya render saat hover */}
                 {isHovering && (
                     <>
                         <g clipPath="url(#clip1_42_8)">
@@ -153,10 +152,9 @@ export function LineChart() {
                                 fill="white"
                                 pointerEvents="none"
                             />
-                            {/* Tooltip Box untuk Vector 1 (USDT) */}
                             <rect
                                 x={dotPos1.x - 25}
-                                y={dotPos1.y - 30}
+                                y={dotPos1.y - 45}
                                 width="50"
                                 height="24"
                                 rx="6"
@@ -167,14 +165,14 @@ export function LineChart() {
                             />
                             <text
                                 x={dotPos1.x}
-                                y={dotPos1.y - 12}
+                                y={dotPos1.y - 27}
                                 textAnchor="middle"
                                 fill="white"
-                                fontSize="12"
+                                fontSize="14"
                                 fontWeight="600"
                                 pointerEvents="none"
                             >
-                                USDT
+                                GEMI
                             </text>
                         </g>
                         <g clipPath="url(#clip2_42_8)">
@@ -185,10 +183,9 @@ export function LineChart() {
                                 fill="white"
                                 pointerEvents="none"
                             />
-                            {/* Tooltip Box untuk Vector 2 (BTC) */}
                             <rect
                                 x={dotPos2.x - 25}
-                                y={dotPos2.y - 30}
+                                y={dotPos2.y - 45}
                                 width="50"
                                 height="24"
                                 rx="6"
@@ -199,14 +196,14 @@ export function LineChart() {
                             />
                             <text
                                 x={dotPos2.x}
-                                y={dotPos2.y - 12}
+                                y={dotPos2.y - 27}
                                 textAnchor="middle"
                                 fill="white"
-                                fontSize="12"
+                                fontSize="14"
                                 fontWeight="600"
                                 pointerEvents="none"
                             >
-                                BTC
+                                CFX
                             </text>
                         </g>
                     </>
