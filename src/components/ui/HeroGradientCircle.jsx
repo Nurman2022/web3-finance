@@ -32,7 +32,7 @@ export function HeroGradientCircle({ children, className = "" }) {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-20">
+                <div className="z-20">
                     {children}
                 </div>
             </div>

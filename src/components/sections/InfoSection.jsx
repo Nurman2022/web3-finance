@@ -68,8 +68,7 @@ export function InfoSection({ className }) {
                                     feature.reversed && "lg:col-start-1"
                                 )}
                             >
-                                {/* Glow Background Container */}
-                                <div className="absolute inset-0 w-full h-full pointer-events-none">
+                                <div className="absolute inset-0 pointer-events-none">
                                     {/* Large Glow */}
                                     <div
                                         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
@@ -88,7 +87,7 @@ export function InfoSection({ className }) {
 
                                     {/* Grid Lines Overlay */}
                                     <div
-                                        className="absolute inset-0 opacity-30"
+                                        className="inset-0 opacity-30"
                                         style={{
                                             backgroundImage: `
                                                 linear-gradient(90deg, oklch(87.09% 0.0055 286.29 / 0.3) 1px, transparent 1px),
