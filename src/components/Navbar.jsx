@@ -12,31 +12,9 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import { User } from "lucide-react";
+import { navItems, navbarConfig } from "@/data/navbar";
 
 export function NavbarDemo({ children }) {
-    const navItems = [
-        {
-            name: "Home",
-            link: "#home",
-        },
-        {
-            name: "Technology",
-            link: "#technology",
-        },
-        {
-            name: "Features",
-            link: "#features",
-        },
-        {
-            name: "Pricing",
-            link: "#pricing",
-        },
-        {
-            name: "FAQ",
-            link: "#faq",
-        },
-    ];
-
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
@@ -46,7 +24,7 @@ export function NavbarDemo({ children }) {
                 <NavBody>
                     <NavbarLogo />
                     <NavItems items={navItems} />
-                    <NavbarButton variant="dark"> <User size={20} /> Create Account</NavbarButton>
+                    <NavbarButton variant="dark"> <User size={20} /> {navbarConfig.createAccountButton.text}</NavbarButton>
                 </NavBody>
 
                 {/* Mobile Navigation */}
@@ -73,7 +51,7 @@ export function NavbarDemo({ children }) {
                             onClick={() => setIsMobileMenuOpen(false)}
                             variant="primary"
                             className="w-full">
-                            Create Account
+                            {navbarConfig.createAccountButton.text}
                         </NavbarButton>
                     </MobileNavMenu>
                 </MobileNav>

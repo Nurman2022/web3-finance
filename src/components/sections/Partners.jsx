@@ -1,13 +1,6 @@
-export function Partners() {
-    const partners = [
-        { name: "TRON", logo: "/image/tron-logo.png" },
-        { name: "COSMOS", logo: "/image/cosmos-logo.png" },
-        { name: "Stellar", logo: "/image/stellar-logo.png" },
-        { name: "OKX", logo: "/image/okx-logo.png" },
-        { name: "Ethereum", logo: "/image/ethereum-logo.png" },
-        { name: "VeChain", logo: "/image/vechain-logo.png" },
-    ];
+import { partners, partnersConfig } from "@/data/partners";
 
+export function Partners() {
     return (
 
 
@@ -15,12 +8,12 @@ export function Partners() {
             <div className="relative flex flex-col items-center z-20">
                 <div className="mb-8">
                     <span className="inline-flex items-center rounded-full border border-neutral-700 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
-                        Our Partners
+                        {partnersConfig.badge}
                     </span>
                 </div>
 
                 <h2 className="mb-12 text-2xl font-light sm:text-4xl bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-transparent">
-                    Leading the Way in Crypto Trust with Webtrix
+                    {partnersConfig.title}
                 </h2>
 
                 {/* Partner Logos */}

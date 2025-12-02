@@ -17,16 +17,16 @@ export function HeroGradientCircle({ children, className = "" }) {
                                    shadow-[0px_0px_12px_oklch(87.09%_0.0055_286.29),0px_0px_64px_oklch(55.19%_0.0137_285.94),0px_0px_12px_oklch(87.09%_0.0055_286.29)_inset]"
                         >
                             {/* Gradient Layer 1 */}
-                            {/* <div
-                            className="absolute top-0 left-0 h-full w-full rounded-[100%] bg-[oklch(55.19%_0.0137_285.94)]/50"
-                            style={{
-                                maskImage: 'radial-gradient(140% 95%, transparent 0%, transparent 35%, black 55%)'
-                            }}
-                        ></div> */}
+                            <div
+                                className="absolute top-0 left-0 h-full w-full rounded-[100%] bg-[oklch(55.19%_0.0137_285.94)]/10"
+                                style={{
+                                    maskImage: 'radial-gradient(140% 95%, transparent 0%, transparent 35%, black 55%)'
+                                }}
+                            ></div>
 
                             {/* Gradient Layer 2 with hover */}
                             <div
-                                className="absolute top-0 left-0 h-full w-full rounded-[100%] bg-[oklch(87.09%_0.0055_286.29)]/50 
+                                className="absolute top-0 left-0 h-full w-full rounded-[100%] bg-[oklch(87.09%_0.0055_286.29)]/20 
                                        -translate-y-4 opacity-80 transition-all duration-1000 ease-in-out 
                                        group-hover:translate-y-0 group-hover:opacity-100"
                                 style={{
@@ -35,14 +35,14 @@ export function HeroGradientCircle({ children, className = "" }) {
                             ></div>
 
                             {/* Gradient Layer 3 with hover */}
-                            {/* <div
-                            className="absolute top-0 left-0 h-full w-full rounded-[100%] bg-[oklch(87.09%_0.0055_286.29)] 
-                                       -translate-y-4 opacity-80 transition-all duration-1000 ease-in-out 
-                                       group-hover:translate-y-0 group-hover:opacity-100 dark:bg-white"
-                            style={{
-                                maskImage: 'radial-gradient(140% 120%, transparent 0%, transparent 38%, black 43%)'
-                            }}
-                        ></div> */}
+                            <div
+                                className="absolute top-0 left-0 h-full w-full rounded-[100%] bg-[oklch(87.09%_0.0055_286.29)] 
+                                       -translate-y-4 opacity-40 transition-all duration-1000 ease-in-out 
+                                       group-hover:translate-y-0 group-hover:opacity-80 "
+                                style={{
+                                    maskImage: 'radial-gradient(140% 120%, transparent 0%, transparent 38%, black 43%)'
+                                }}
+                            ></div>
                         </div>
 
                         {/* Glow Effects - Positioned at 50% (center of circle) */}
@@ -92,9 +92,6 @@ export function HeroGradientCircle({ children, className = "" }) {
                     {children}
                 </div>
             </div>
-
         </>
-
-
     );
 }
