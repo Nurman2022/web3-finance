@@ -68,12 +68,44 @@ export function InfoSection({ className }) {
                                     feature.reversed && "lg:col-start-1"
                                 )}
                             >
+                                {/* Glow Background Container */}
+                                <div className="absolute inset-0 w-full h-full pointer-events-none">
+                                    {/* Large Glow */}
+                                    <div
+                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                               h-64 w-[60%] scale-[2.5] rounded-[50%] 
+                                               bg-gradient-radial from-[oklch(55.19%_0.0137_285.94)]/50 from-10% to-[oklch(55.19%_0.0137_285.94)]/0 to-60% 
+                                               opacity-20 sm:h-[512px] dark:opacity-100 blur-3xl"
+                                    ></div>
+
+                                    {/* Small Glow */}
+                                    <div
+                                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                               h-32 w-[40%] scale-[2] rounded-[50%] 
+                                               bg-gradient-radial from-[oklch(87.09%_0.0055_286.29)]/30 from-10% to-[oklch(55.19%_0.0137_285.94)]/0 to-60% 
+                                               opacity-20 sm:h-64 dark:opacity-100 blur-2xl"
+                                    ></div>
+
+                                    {/* Grid Lines Overlay */}
+                                    <div
+                                        className="absolute inset-0 opacity-30"
+                                        style={{
+                                            backgroundImage: `
+                                                linear-gradient(90deg, oklch(87.09% 0.0055 286.29 / 0.3) 1px, transparent 1px),
+                                                linear-gradient(0deg, oklch(87.09% 0.0055 286.29 / 0.3) 1px, transparent 1px)
+                                            `,
+                                            backgroundSize: "40px 40px"
+                                        }}
+                                    ></div>
+                                </div>
+
+                                {/* Image */}
                                 <motion.img
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3 }}
                                     src={feature.image}
                                     alt={feature.title}
-                                    className="w-full h-auto object-cover rounded-2xl"
+                                    className="w-full h-auto object-cover rounded-2xl relative z-10"
                                 />
 
                             </motion.div>
