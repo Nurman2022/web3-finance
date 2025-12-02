@@ -1,4 +1,6 @@
-import { OrbitUsers } from "@/components/illustrations/orbit-users";
+// import { OrbitUsers } from "@/components/illustrations/orbit-users";
+
+import { LineChart } from "@/components/illustrations/line-chart";
 
 
 export default function CardStackDemo() {
@@ -16,7 +18,7 @@ export default function CardStackDemo() {
                         </p>
                     </div>
                     <div className="bg-white rounded-3xl p-8 backdrop-blur-sm border border-white/10 overflow-hidden">
-                        <OrbitUsers />
+                        <LineChart />
 
                     </div>
                 </div>

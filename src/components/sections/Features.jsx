@@ -5,13 +5,14 @@ import { CardStack } from "../illustrations/card-stack";
 import { ShieldFlowAnimation } from "../illustrations/shield-flow";
 import { Activity, Shield, UsersRound, CreditCard } from "lucide-react";
 import { OrbitUsers } from "../illustrations/orbit-users";
+import { LineChart } from "../illustrations/line-chart";
 
 export function Features() {
     const features = [
         {
             title: "Real-Time Analytics",
             description: "Gain insights without compromising real-time analytics. Track market trends, monitor portfolio performance and make data-driven decisions with ease.",
-            component: <AnalyticsChart className="w-full max-w-sm" />,
+            component: <LineChart />,
             icon: Activity,
             gridClass: "col-span-3 row-span-1"
         },
@@ -69,7 +70,7 @@ export function Features() {
                             <div className="relative group h-full w-full min-h-[300px] rounded-3xl border border-neutral-800 overflow-hidden bg-[#0d0d0d]">
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-neutral-200/15 group-hover:bg-neutral-200/20 rounded-full blur-[100px] transition-all duration-700 ease-in-out" />
                                 <div className="relative z-10 h-full flex flex-col p-6">
-                                    <div className="flex items-center gap-4 mb-6">
+                                    <div className="flex items-start gap-4 mb-6">
                                         <div className="size-12 border border-white/15 rounded-lg inline-flex items-center justify-center flex-shrink-0 bg-neutral-200/10">
                                             <feature.icon className="text-white size-5" />
                                         </div>
