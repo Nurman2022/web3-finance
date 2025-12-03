@@ -1,12 +1,12 @@
 'use client'
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { NavbarDemo } from "@/components/Navbar";
-import { Features } from "@/components/sections/Features";
-import { InfoSection } from "@/components/sections/InfoSection";
-import { FAQ } from "@/components/sections/FAQ";
-import { Footer } from "@/components/sections/Footer";
-import { Partners } from "@/components/sections/Partners";
-import { HeroGradientCircle } from "@/components/ui/HeroGradientCircle";
+import { NavbarDemo } from "@/components/navbar";
+import { Features } from "@/components/sections/features";
+import { InfoSection } from "@/components/sections/info-section";
+import { FAQ } from "@/components/sections/faq";
+import { Footer } from "@/components/sections/footer";
+import { Partners } from "@/components/sections/partners";
+import { HeroGradientCircle } from "@/components/ui/hero-gradientCircle";
 
 
 export default function Home() {

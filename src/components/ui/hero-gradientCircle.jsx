@@ -1,16 +1,17 @@
 "use client";
-import { CircleGradient } from "./CircleGradient";
+import { CircleGradient } from "./circle-gradient";
 
 export function HeroGradientCircle({ children, className = "" }) {
     return (
 
         <>
             <div className={`relative bg-gradient-to-b from-neutral-800 via-[#050505] to-[#050505] ${className}`}>
+                {/* className={`relative bg-gradient-to-b from-neutral-900 md:from-neutral-800 via-[#050505] to-[#050505] ${className}`} */}
 
-                {/* Circle Gradient Background */}
+
                 <CircleGradient />
 
-                <div className="absolute inset-0 pointer-events-none z-40">
+                <div className="absolute inset-0 pointer-events-none z-10">
                     {/* Top Left */}
                     <div className="absolute top-1/2 -left-96 w-[900px] h-[1000px] bg-neutral-400/20 rounded-full blur-[130px]" />
 

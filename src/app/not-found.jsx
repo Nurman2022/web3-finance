@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import { CircleGradient } from "@/components/ui/CircleGradient";
+import { CircleGradient } from "@/components/ui/circle-gradient";
 
 export default function NotFound() {
     return (

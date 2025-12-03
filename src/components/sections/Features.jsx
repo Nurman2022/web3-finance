@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "motion/react";
-import { AnalyticsChart } from "../illustrations/analytics-chart";
 import { CardStack } from "../illustrations/card-stack";
 import { ShieldFlowAnimation } from "../illustrations/shield-flow";
 import { Activity, Shield, UsersRound, CreditCard } from "lucide-react";
@@ -14,40 +13,37 @@ export function Features() {
             description: "Gain insights without compromising real-time analytics. Track market trends, monitor portfolio performance and make data-driven decisions with ease.",
             component: <LineChart />,
             icon: Activity,
-            gridClass: "col-span-3 row-span-1"
+            gridClass: "col-span-1 md:col-span-3 row-span-1"
         },
         {
             title: "Advanced Security",
             description: "Webtnx uses advanced encryption and multi-layered security to protect your assets ard personal information from threats.",
             component: <ShieldFlowAnimation className="w-full max-w-xs" />,
             icon: Shield,
-            gridClass: "col-span-2 row-span-1"
+            gridClass: "col-span-1 md:col-span-2 row-span-1"
         },
         {
             title: "Ecosystem & Partnerships",
             description: "Foster a thriving ecosystem through strategic partnerships, community engagement and support for innovative projects.",
             component: <OrbitUsers className="w-full max-w-xs" />,
             icon: UsersRound,
-            gridClass: "col-span-2 row-span-1"
-            // the really match animation https://notus-agent-marketing-template.vercel.app/
+            gridClass: "col-span-1 md:col-span-2 row-span-1"
         },
         {
             title: "Secure Payment Solutions",
             description: "Manage and trade with our premium crypto cards. Experience seamless transactions designed for the future of finance.",
             component: <CardStack />,
             icon: CreditCard,
-            gridClass: "col-span-3 row-span-1"
+            gridClass: "col-span-1 md:col-span-3 row-span-1"
         },
     ];
 
     return (
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-40">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 py-40">
             <div className="text-center mb-16">
-                <div className="mb-4">
-                    <span className="inline-flex items-center rounded-full border border-neutral-700 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
-                        Our Features
-                    </span>
-                </div>
+                <span className="inline-flex mb-4 items-center rounded-full border border-neutral-700 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
+                    Our Features
+                </span>
                 <h2 className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl">
                     Innovative Features of Webtrix
                 </h2>
@@ -57,7 +53,7 @@ export function Features() {
                 </p>
             </div>
             <div className="flex h-full w-full items-center justify-center">
-                <div className="grid h-full w-full gap-4 p-2 grid-cols-5 grid-rows-2 rounded-lg max-w-6xl mx-auto">
+                <div className="grid h-full w-full gap-4 p-2 grid-cols-1 md:grid-cols-5 md:grid-rows-2 rounded-lg max-w-6xl mx-auto">
                     {features.map((feature, index) => (
                         <motion.div
                             key={feature.title}
@@ -69,7 +65,7 @@ export function Features() {
                         >
                             <div className="relative group h-full w-full min-h-[300px] rounded-3xl border border-neutral-800 overflow-hidden bg-[#0d0d0d]">
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-neutral-200/15 group-hover:bg-neutral-200/20 rounded-full blur-[100px] transition-all duration-700 ease-in-out" />
-                                <div className="relative z-10 h-full flex flex-col p-6">
+                                <div className="relative h-full flex flex-col p-6">
                                     <div className="flex items-start gap-4 mb-6">
                                         <div className="size-12 border border-white/15 rounded-lg inline-flex items-center justify-center flex-shrink-0 bg-neutral-200/10">
                                             <feature.icon className="text-white size-5" />

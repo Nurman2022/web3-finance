@@ -17,11 +17,11 @@ export function Partners() {
                 </h2>
 
                 {/* Partner Logos */}
-                <div className="flex flex-wrap items-center justify-center gap-8">
+                <div className="flex flex-wrap w-full items-center justify-center gap-3 md:gap-4 lg:gap-8 px-4">
                     {partners.map((partner) => (
                         <div
                             key={partner.name}
-                            className="flex h-20 w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-6 hover:bg-white hover:scale-105 transition-all duration-300 group"
+                            className="flex h-16 md:h-20 w-32 md:w-40 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 px-4 md:px-6 hover:bg-white hover:scale-105 transition-all duration-300 group"
                         >
                             <img
                                 src={partner.logo}
