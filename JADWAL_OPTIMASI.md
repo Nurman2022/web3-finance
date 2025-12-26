@@ -8,11 +8,10 @@
 ### **SPRINT 1: FOUNDATION & STRUCTURE**
 | # | Task | Detail | Duration | Status |
 |----|------|--------|----------|--------|
-| **1** | Project Structure Cleanup | Reorganize folders, rename files, delete unused | 2 jam | ⬜ |
-| **2** | Update globals.css | Clean theme, remove comments, setup @theme | 1 jam | ⬜ |
-| **3** | TypeScript Setup | Setup types, config tsconfig.json | 1 jam | ⬜ |
-| **4** | Documentation Start | Create README.md skeleton | 0.5 jam | ⬜ |
-| **5** | Review & Commit | Check progress, push to git | 0.5 jam | ⬜ |
+| **1** | Project Structure Cleanup | Reorganize folders, rename files, delete unused | 2 jam | ✅ |
+| **2** | Update globals.css | Clean theme, remove comments, setup @theme | 1 jam | ✅ |
+| **3** | Documentation Start | Create README.md skeleton | 0.5 jam | ✅ |
+| **4** | Review & Commit | Check progress, push to git | 0.5 jam | ✅ |
 | **TOTAL SPRINT 1** | **5 Jam** | Foundation Solid | | |
 
 ---

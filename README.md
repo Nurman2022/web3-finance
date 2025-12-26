@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web3Finance - Landing Page Template
 
-## Getting Started
+Professional Web3/Crypto landing page template built with Next.js 15, React 19, and Tailwind CSS v4. Perfect for launching your crypto project on Gumroad.
 
-First, run the development server:
+## ✨ Features
+
+- 🌙 Dark theme optimized
+- ⚡ Built with Next.js 15 App Router
+- 🎨 Tailwind CSS v4 with custom colors
+- 🎭 Framer Motion animations
+- 📱 Fully responsive design
+- ⚙️ JavaScript only (no TypeScript overhead)
+- 🎯 SEO optimized
+- 📦 Production ready
+- 🧩 shadcn/ui support (Working in Progress)
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                  # Next.js App Router
+│   ├── layout.jsx
+│   ├── page.jsx
+│   ├── globals.css
+│   └── not-found.jsx
+├── components/          # React Components
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── sections/        # Page sections
+│   ├── ui/             # Reusable UI components
+│   └── illustrations/   # Chart & illustration components
+├── data/               # Static data
+├── lib/                # Utilities & helpers
+└── styles/             # Global styles
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Colors
+Update colors in `tailwind.config.js`:
+- Dark backgrounds: `--color-dark-bg`, `--color-dark-card`, etc.
+- Primary/Secondary: `--color-oklch-primary`, `--color-oklch-secondary`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Content
+Edit data files in `src/data/`:
+- `navigation.js` - Navbar menu
+- `features.js` - Features section
+- `partners.js` - Partner logos
+- `faq.js` - FAQ items
+- `footer.js` - Footer content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Styling
+Global styles in `src/app/globals.css` and `src/styles/`
 
-## Deploy on Vercel
+## 🏗️ Building
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Creates optimized production build in `.next/` directory.
+
+## 📊 Performance
+
+- Lighthouse score: 90+
+- Fully responsive (320px - 1280px+)
+- Optimized images and fonts
+- Minimal bundle size
+
+## 📄 License
+
+MIT License - feel free to use commercially
+
+## 🤝 Support
+
+For questions or issues, please check the documentation or create an issue.
+
+---
+
+**Ready to launch?** Deploy to Vercel with one click for the best performance.

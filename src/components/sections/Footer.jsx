@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
 import { footerLinks, socialLinks, footerConfig } from "@/data/footer";
 
 export function Footer({ className }) {
@@ -14,14 +13,9 @@ export function Footer({ className }) {
     };
 
     return (
-        <footer className={cn("bg-gradient-to-t from-neutral-950 to-neutral-900/95 relative flex items-center w-full justify-center overflow-hidden border-t-2 border-neutral-700/80")}>
+        <footer className="bg-gradient-to-t from-neutral-950 to-neutral-900/95 relative flex items-center w-full justify-center overflow-hidden border-t-2 border-neutral-700/80">
             <div
-                className={cn(
-                    "absolute inset-0",
-                    "[background-size:150px_150px]",
-                    "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
-                    "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
-                )} />
+                className="absolute inset-0 [background-size:150px_150px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]" />
             <div className="mx-auto max-w-7xl px-4 py-14 z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-12">
                     <div className="lg:col-span-3 bg-dark-section/75 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.1)]">
@@ -110,8 +104,6 @@ export function Footer({ className }) {
                                 );
                             })}
                         </div>
-
-                        {/* Legal Links */}
                         <div className="flex items-center gap-6">
                             {footerConfig.legalLinks.map((link, idx) => (
                                 <motion.a
