@@ -6,7 +6,7 @@ import { InfoSection } from "@/components/sections/info-section";
 import { FAQ } from "@/components/sections/faq";
 import { Footer } from "@/components/sections/footer";
 import { Partners } from "@/components/sections/partners";
-import { HeroGradientCircle } from "@/components/ui/hero-gradientCircle";
+import { HeroGradientCircle } from "@/components/ui/hero-gradient-circle";
 
 
 export default function Home() {
@@ -21,12 +21,12 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 className="z-20 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl max-w-5xl">
+            <h1 className="z-20 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text font-normal py-8 text-4xl text-transparent lg:text-6xl max-w-5xl">
               Revolutionize Your Transactions With Secure Blockchain Solutions
             </h1>
 
             <p className="mt-4 max-w-4xl text-base text-neutral-400 sm:text-lg">
-              Experience the future of digital transactions with our state-of-the-art blockchain technology. Our secure,
+              Experience the future of digital transactions with our state of the art blockchain technology. Our secure,
               decentralized platform ensures every transaction is transparent, immutable, and protected against fraud.
             </p>
 

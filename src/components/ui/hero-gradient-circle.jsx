@@ -5,10 +5,7 @@ export function HeroGradientCircle({ children, className = "" }) {
     return (
 
         <>
-            <div className={`relative bg-gradient-to-b from-neutral-800 via-[#050505] to-[#050505] ${className}`}>
-                {/* className={`relative bg-gradient-to-b from-neutral-900 md:from-neutral-800 via-[#050505] to-[#050505] ${className}`} */}
-
-
+            <div className={`relative bg-gradient-to-b from-neutral-800 via-dark-bg to-dark-bg ${className}`}>
                 <CircleGradient />
 
                 <div className="absolute inset-0 pointer-events-none z-10">
@@ -20,15 +17,15 @@ export function HeroGradientCircle({ children, className = "" }) {
 
                     {/* Left block */}
                     <div className="absolute top-[15%] left-0 ">
-                        <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
-                        <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
+                        <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
+                        <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
                     </div>
 
 
                     {/* Right block */}
                     <div className="absolute top-[15%] right-0 scale-x-[-1]">
-                        <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
-                        <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-[#161515] border-2 border-neutral-800" />
+                        <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
+                        <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
                     </div>
                 </div>
 

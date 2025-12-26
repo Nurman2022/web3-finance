@@ -3,7 +3,6 @@
 export function CircleGradient() {
     return (
         <div className="absolute inset-x-0 -top-40 overflow-hidden pt-20 pointer-events-none">
-            {/* Container dengan aspect ratio menggunakan padding-top trick */}
             <div className="group relative w-full pt-[80%]">
                 {/* Perfect Circle menggunakan pt-[100%] */}
                 <div

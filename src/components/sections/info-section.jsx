@@ -12,7 +12,6 @@ export function InfoSection() {
                         "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
                         feature.reversed && "lg:grid-flow-dense"
                     )}>
-                        {/* Content Side */}
                         <motion.div
                             initial={{ opacity: 0, x: feature.reversed ? 50 : -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -27,7 +26,7 @@ export function InfoSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 0.1 }}
-                                    className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl"
+                                    className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-normal text-transparent lg:text-6xl"
                                 >
                                     {feature.title}
                                 </motion.h2>
@@ -55,7 +54,6 @@ export function InfoSection() {
                             </motion.button>
                         </motion.div>
 
-                        {/* Image Side */}
                         <motion.div
                             initial={{ opacity: 0, x: feature.reversed ? -50 : 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -80,7 +78,6 @@ export function InfoSection() {
                                 ></div>
                             </div>
 
-                            {/* Image */}
                             <motion.img
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}

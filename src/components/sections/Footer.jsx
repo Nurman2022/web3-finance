@@ -14,7 +14,7 @@ export function Footer({ className }) {
     };
 
     return (
-        <footer className={cn("bg-gradient-to-t from-[#171717] to-[#1d1d1d] relative flex items-center w-full justify-center overflow-hidden")}>
+        <footer className={cn("bg-gradient-to-t from-neutral-950 to-neutral-900/95 relative flex items-center w-full justify-center overflow-hidden border-t-2 border-neutral-700/80")}>
             <div
                 className={cn(
                     "absolute inset-0",
@@ -24,7 +24,7 @@ export function Footer({ className }) {
                 )} />
             <div className="mx-auto max-w-7xl px-4 py-14 z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-12">
-                    <div className="lg:col-span-3 bg-[#202020] rounded-2xl p-6">
+                    <div className="lg:col-span-3 bg-dark-section/75 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.1)]">
                         <div className="flex items-center gap-2 mb-4">
                             <img
                                 src="/image/w3f-logo.png"
@@ -48,7 +48,7 @@ export function Footer({ className }) {
                                     placeholder={footerConfig.newsletter.placeholder}
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-8 py-6 bg-[#2b2b2b] rounded-xl text-white placeholder-neutral-400 transition-colors"
+                                    className="w-full px-8 py-6 bg-dark-input rounded-xl text-white placeholder-neutral-400 transition-colors"
                                     required
                                 />
                             </div>
@@ -63,8 +63,8 @@ export function Footer({ className }) {
                         </form>
                     </div>
 
-                    {/* Links Sections */}
-                    <div className="lg:col-span-5 bg-[#202020] rounded-2xl p-6">
+                    <div className="lg:col-span-5 bg-dark-section/75 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.1)]">
+
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {Object.entries(footerLinks).map(([category, links]) => (
                                 <div key={category}>
@@ -87,14 +87,12 @@ export function Footer({ className }) {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#202020] mt-12 rounded-2xl p-6">
+                <div className="bg-dark-section mt-12 rounded-2xl p-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                        {/* Copyright */}
                         <div className="text-neutral-400 text-sm">
                             {footerConfig.copyright}
                         </div>
 
-                        {/* Social Links */}
                         <div className="flex items-center gap-4">
                             {socialLinks.map((social) => {
                                 const IconComponent = social.icon;

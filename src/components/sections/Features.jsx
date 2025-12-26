@@ -41,10 +41,10 @@ export function Features() {
     return (
         <div className="relative z-20 max-w-7xl mx-auto px-4 py-40">
             <div className="text-center mb-16">
-                <span className="inline-flex mb-4 items-center rounded-full border border-neutral-700 bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
+                <span className="inline-flex mb-4 items-center rounded-full border border-dark-grid bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
                     Our Features
                 </span>
-                <h2 className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl">
+                <h2 className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-normal text-transparent lg:text-6xl">
                     Innovative Features of Webtrix
                 </h2>
                 <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
@@ -71,8 +71,8 @@ export function Features() {
                                             <feature.icon className="text-white size-5" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-light text-white mb-2">{feature.title}</h3>
-                                            <p className="text-neutral-400 text-xs leading-relaxed">
+                                            <h3 className="text-xl font-normal text-white mb-2">{feature.title}</h3>
+                                            <p className="text-neutral-400 text-xs font-normal leading-relaxed">
                                                 {feature.description}
                                             </p>
                                         </div>

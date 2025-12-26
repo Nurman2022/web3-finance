@@ -32,7 +32,7 @@ export function FAQ() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="md:text-5xl mb-6 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-light text-transparent lg:text-6xl"
+                        className="md:text-5xl mb-6 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-normal text-transparent lg:text-6xl"
                     >
                         Have a Questions?<br />
                         We've Got Your Answers.
@@ -46,7 +46,7 @@ export function FAQ() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-neutral-400 text-lg leading-relaxed mb-8"
                     >
-                        Confused or curious? Don't worry — we've got you covered. Our comprehensive FAQ section is here to provide clear, straightforward answers to all your questions.
+                        Confused or curious? Don't worry we've got you covered. Our comprehensive FAQ section is here to provide clear, straightforward answers to all your questions.
                     </motion.p>
 
                     <motion.button
