@@ -125,7 +125,6 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
 
                 const relativeY = beamRect.top - parentRect.top;
 
-                // Meledak setiap 100px
                 if (relativeY > lastExplosionY + 100) {
                     const relativeX =
                         beamRect.left - parentRect.left + beamRect.width / 2;

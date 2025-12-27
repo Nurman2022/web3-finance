@@ -16,6 +16,7 @@ export default function Home() {
         <BackgroundBeamsWithCollision>
           <div className="relative z-20 flex flex-col items-center justify-center px-4 text-center">
             <div className="mb-8">
+
               <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-b from-neutral-400/20 to-neutral-800/20 border border-neutral-700 px-4 py-2 text-sm text-neutral-300">
                 ✦ Trusted Platform
               </span>

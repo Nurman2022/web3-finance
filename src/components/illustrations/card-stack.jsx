@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function CardStack({ className }) {
     const [activeIndex, setActiveIndex] = useState(0);
-    const offset = 35; // offset between cards
+    const offset = 35;
     const cards = [
         {
             id: 1,
@@ -34,7 +34,7 @@ export function CardStack({ className }) {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prev) => (prev + 1) % cards.length);
-        }, 5000); // card change every 5 seconds
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [cards.length]);

@@ -16,14 +16,14 @@ export function HeroGradientCircle({ children, className = "" }) {
                     <div className="absolute top-3/4 -right-50 w-[400px] h-[400px] bg-neutral-400/20 rounded-full blur-[100px]" />
 
                     {/* left block */}
-                    <div className="absolute top-[15%] left-0 ">
+                    <div className="absolute top-[15%] left-0 invisible md:visible">
                         <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
                         <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
                     </div>
 
 
                     {/* right block */}
-                    <div className="absolute top-[15%] right-0 scale-x-[-1]">
+                    <div className="absolute top-[15%] right-0 scale-x-[-1] invisible md:visible">
                         <div className="h-20 w-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
                         <div className="h-20 w-20 ml-10 bg-gradient-to-br from-[#3F3F3F] to-dark-bg-tertiary border-2 border-dark-grid" />
                     </div>

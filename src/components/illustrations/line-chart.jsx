@@ -15,7 +15,7 @@ export function LineChart({ className = "" }) {
         if (!svg) return;
 
         let lastTime = 0;
-        const throttleDelay = 16; // ~60fps
+        const throttleDelay = 16;
 
         const handleMouseMove = (e) => {
             if (!isHovering) return;
@@ -27,7 +27,6 @@ export function LineChart({ className = "" }) {
             const svg = svgRef.current;
             const rect = svg.getBoundingClientRect();
 
-            // ✅ PERBAIKAN: Transform mouse coordinates ke SVG viewBox coordinates
             const svgViewBox = svg.viewBox.baseVal;
             const scaleX = svgViewBox.width / rect.width;
             const scaleY = svgViewBox.height / rect.height;
