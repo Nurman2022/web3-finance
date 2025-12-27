@@ -31,7 +31,7 @@ export function Partners() {
                     {partnersImg.map((partner) => (
                         <div
                             key={partner.name}
-                            className="flex h-16 md:h-20 w-32 md:w-40 items-center justify-center rounded-lg border border-dark-grid bg-dark-card px-4 md:px-6 hover:bg-white hover:scale-105 transition-all duration-300 group"
+                            className="flex h-16 md:h-20 w-32 md:w-40 items-center justify-center rounded-lg border border-dark-grid bg-dark-card px-4 md:px-6 hover:bg-white hover:scale-105 transition-all duration-300 group shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.25)]"
                         >
                             <img
                                 src={partner.logo}
