@@ -6,7 +6,6 @@ export function AnalyticsChart({ className }) {
     return (
         <div className={cn("relative w-full h-auto", className)}>
             <svg width="1455" height="677" viewBox="0 0 1455 677" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-                {/* Left Chart Container */}
                 <motion.rect
                     x="56" y="43" width="814" height="578" rx="31"
                     fill="url(#paint0_linear_42_8)"
@@ -16,8 +15,6 @@ export function AnalyticsChart({ className }) {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 />
-
-                {/* Left Chart Path with Growth Animation */}
                 <motion.path
                     d="M874 378.5L789 275L695 403.5L573.5 393M574 393.5L513.5 524L390.5 308L246.5 458.5L143 369.5L58 425.5"
                     stroke="#FFFFFF"
@@ -34,8 +31,6 @@ export function AnalyticsChart({ className }) {
                         filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))"
                     }}
                 />
-
-                {/* Animated dots on path points */}
                 {[
                     { cx: 874, cy: 378.5 },
                     { cx: 789, cy: 275 },
@@ -70,7 +65,6 @@ export function AnalyticsChart({ className }) {
                     </motion.circle>
                 ))}
 
-                {/* USDT Badge with Enhanced Animation */}
                 <motion.g
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -94,7 +88,6 @@ export function AnalyticsChart({ className }) {
                         }}
                     />
 
-                    {/* USDT Text with Typewriter Effect */}
                     <motion.text
                         x="668.5"
                         y="328"
@@ -109,7 +102,6 @@ export function AnalyticsChart({ className }) {
                         USDT
                     </motion.text>
 
-                    {/* Price indicator */}
                     <motion.text
                         x="668.5"
                         y="320"
@@ -125,7 +117,6 @@ export function AnalyticsChart({ className }) {
                     </motion.text>
                 </motion.g>
 
-                {/* Right Chart Container */}
                 <motion.rect
                     x="916" y="43" width="774" height="578" rx="31"
                     fill="url(#paint1_linear_42_8)"
@@ -136,7 +127,6 @@ export function AnalyticsChart({ className }) {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                 />
 
-                {/* Right Chart Path with Upward Trend */}
                 <motion.path
                     d="M914.5 398.5L980.5 314L1095 328.5L1203 459.5L1305.5 364L1431.5 395H1453"
                     stroke="#9CA3AF"
@@ -154,7 +144,6 @@ export function AnalyticsChart({ className }) {
                     }}
                 />
 
-                {/* Animated dots for right chart */}
                 {[
                     { cx: 914.5, cy: 398.5 },
                     { cx: 980.5, cy: 314 },
@@ -186,13 +175,11 @@ export function AnalyticsChart({ className }) {
                     </motion.circle>
                 ))}
 
-                {/* Growth Indicators */}
                 <motion.g
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 3 }}
                 >
-                    {/* Left chart growth indicator */}
                     <motion.g
                         animate={{
                             y: [0, -5, 0]
@@ -225,7 +212,6 @@ export function AnalyticsChart({ className }) {
                         </motion.text>
                     </motion.g>
 
-                    {/* Right chart growth indicator */}
                     <motion.g
                         animate={{
                             y: [0, -5, 0]
@@ -260,7 +246,6 @@ export function AnalyticsChart({ className }) {
                     </motion.g>
                 </motion.g>
 
-                {/* Floating particles for enhanced effect */}
                 {Array.from({ length: 8 }).map((_, index) => (
                     <motion.circle
                         key={index}
@@ -281,7 +266,6 @@ export function AnalyticsChart({ className }) {
                     />
                 ))}
 
-                {/* Grid lines animation */}
                 <motion.g
                     stroke="rgba(93, 93, 93, 0.3)"
                     strokeWidth="1"
@@ -289,7 +273,6 @@ export function AnalyticsChart({ className }) {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
                 >
-                    {/* Horizontal grid lines */}
                     {Array.from({ length: 6 }).map((_, index) => (
                         <motion.line
                             key={index}
@@ -306,7 +289,6 @@ export function AnalyticsChart({ className }) {
                         />
                     ))}
 
-                    {/* Vertical grid lines */}
                     {Array.from({ length: 8 }).map((_, index) => (
                         <motion.line
                             key={index}
@@ -324,7 +306,6 @@ export function AnalyticsChart({ className }) {
                     ))}
                 </motion.g>
 
-                {/* Right chart grid */}
                 <motion.g
                     stroke="rgba(93, 93, 93, 0.3)"
                     strokeWidth="1"
@@ -349,7 +330,6 @@ export function AnalyticsChart({ className }) {
                     ))}
                 </motion.g>
 
-                {/* Gradients */}
                 <defs>
                     <linearGradient id="paint0_linear_42_8" x1="838" y1="598" x2="263.5" y2="242.5" gradientUnits="userSpaceOnUse">
                         <stop stopColor="#161515" />

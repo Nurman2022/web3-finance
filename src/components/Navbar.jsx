@@ -20,14 +20,12 @@ export function NavbarDemo({ children }) {
     return (
         <div className="relative w-full">
             <Navbar>
-                {/* Desktop Navigation */}
                 <NavBody>
                     <NavbarLogo />
                     <NavItems items={navItems} />
                     <NavbarButton variant="dark"> <User size={20} /> {navbarConfig.createAccountButton.text}</NavbarButton>
                 </NavBody>
 
-                {/* Mobile Navigation */}
                 <MobileNav>
                     <MobileNavHeader>
                         <NavbarLogo />

@@ -13,7 +13,6 @@ export function ShieldFlowAnimation({ className }) {
     return (
         <div className={cn("w-full h-full", className)}>
             <svg width="1448" height="1044" viewBox="0 0 1448 1044" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
-                {/* Background paths - static dimmed */}
                 <path
                     d="M1031 379H1178.91L1440.67 625.36"
                     stroke="#898989"
@@ -45,7 +44,6 @@ export function ShieldFlowAnimation({ className }) {
                     opacity="0.3"
                 />
 
-                {/* Beam 1 - Top right diagonal */}
                 <path
                     d="M1031 379H1178.91L1440.67 625.36"
                     stroke={`url(#${beam1Id})`}
@@ -54,7 +52,6 @@ export function ShieldFlowAnimation({ className }) {
                     fill="none"
                 />
 
-                {/* Beam 2 - Top left diagonal */}
                 <path
                     d="M401.269 379H264.091L0 612.762"
                     stroke={`url(#${beam2Id})`}
@@ -63,7 +60,6 @@ export function ShieldFlowAnimation({ className }) {
                     fill="none"
                 />
 
-                {/* Beam 3 - Bottom vertical */}
                 <path
                     d="M 727 628 L 727 1044"
                     stroke={`url(#${beam3Id})`}
@@ -72,7 +68,6 @@ export function ShieldFlowAnimation({ className }) {
                     fill="none"
                 />
 
-                {/* Beam 4 - Left horizontal */}
                 <path
                     d="M 412.003 308.315 L 0.468852 310.181"
                     stroke={`url(#${beam4Id})`}
@@ -81,7 +76,6 @@ export function ShieldFlowAnimation({ className }) {
                     fill="none"
                 />
 
-                {/* Beam 5 - Right horizontal */}
                 <path
                     d="M 1031 309.176 L 1447.2 307.31"
                     stroke={`url(#${beam5Id})`}
@@ -90,7 +84,6 @@ export function ShieldFlowAnimation({ className }) {
                     fill="none"
                 />
 
-                {/* Shield containers - rotating beam */}
                 <motion.rect
                     x="405.468" y="0" width="625.233" height="625.233" rx="75"
                     fill="url(#paint0_radial_28_2)"
@@ -120,7 +113,6 @@ export function ShieldFlowAnimation({ className }) {
                     opacity="0.9"
                 />
 
-                {/* Shield icon - static */}
                 <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -128,9 +120,7 @@ export function ShieldFlowAnimation({ className }) {
                     fill="#1E1E1E"
                 />
 
-                {/* Gradient definitions - Using AnimatedBeam technique */}
                 <defs>
-                    {/* Beam 1 - Animated Gradient - REVERSED */}
                     <motion.linearGradient
                         id={beam1Id}
                         gradientUnits="userSpaceOnUse"
@@ -150,7 +140,6 @@ export function ShieldFlowAnimation({ className }) {
                         <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
                     </motion.linearGradient>
 
-                    {/* Beam 2 - Animated Gradient - REVERSED */}
                     <motion.linearGradient
                         id={beam2Id}
                         gradientUnits="userSpaceOnUse"
@@ -170,7 +159,6 @@ export function ShieldFlowAnimation({ className }) {
                         <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
                     </motion.linearGradient>
 
-                    {/* Beam 3 - Animated Gradient - REVERSED */}
                     <motion.linearGradient
                         id={beam3Id}
                         gradientUnits="userSpaceOnUse"
@@ -190,7 +178,6 @@ export function ShieldFlowAnimation({ className }) {
                         <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
                     </motion.linearGradient>
 
-                    {/* Beam 4 - Animated Gradient - Left to Right */}
                     <motion.linearGradient
                         id={beam4Id}
                         gradientUnits="userSpaceOnUse"
@@ -210,7 +197,6 @@ export function ShieldFlowAnimation({ className }) {
                         <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
                     </motion.linearGradient>
 
-                    {/* Beam 5 - Animated Gradient - Right to Left */}
                     <motion.linearGradient
                         id={beam5Id}
                         gradientUnits="userSpaceOnUse"
@@ -235,7 +221,6 @@ export function ShieldFlowAnimation({ className }) {
                         <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.8" />
                     </linearGradient>
 
-                    {/* Rotating Beam Gradient - More refined */}
                     <linearGradient id="rotatingBeamGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0" />
                         <stop offset="20%" stopColor="#FFFFFF" stopOpacity="0.6" />

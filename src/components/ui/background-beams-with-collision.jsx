@@ -153,7 +153,7 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
             setTimeout(() => {
                 setCollision({ detected: false, coordinates: null });
                 setCycleCollisionDetected(false);
-            }, 500); // Kurangi delay untuk ledakan lebih cepat
+            }, 500);
 
             setTimeout(() => {
                 setBeamKey((prevKey) => prevKey + 1);
@@ -161,7 +161,6 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
         }
     }, [collision]);
 
-    // Reset lastExplosionY ketika beam restart
     useEffect(() => {
         setLastExplosionY(0);
     }, [beamKey]);
@@ -197,7 +196,6 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
                     beamOptions.className
                 )}>
 
-                {/* Lingkaran putih berkedip di ujung beam */}
                 <BlinkingStar blinkSpeed={beamOptions.blinkSpeed || 1.5} />
             </motion.div>
         </>
@@ -206,7 +204,6 @@ const CollisionMechanism = React.forwardRef(({ parentRef, containerRef, beamOpti
 
 CollisionMechanism.displayName = "CollisionMechanism";
 
-// Komponen Bintang Berkedip
 const BlinkingStar = ({
     blinkSpeed = 0.5
 }) => {
