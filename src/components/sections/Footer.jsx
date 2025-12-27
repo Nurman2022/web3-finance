@@ -18,7 +18,7 @@ export function Footer({ className }) {
                 className="absolute inset-0 [background-size:150px_150px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]" />
             <div className="mx-auto max-w-7xl px-4 py-14 z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-12">
-                    <div className="lg:col-span-3 bg-dark-section/75 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.1)]">
+                    <div className="lg:col-span-3 bg-dark-section/75 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.3)]">
                         <div className="flex items-center gap-2 mb-4">
                             <img
                                 src="/image/w3f-logo.png"
@@ -57,7 +57,7 @@ export function Footer({ className }) {
                         </form>
                     </div>
 
-                    <div className="lg:col-span-5 bg-dark-section/75 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.1)]">
+                    <div className="lg:col-span-5 bg-dark-section/75 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.3)]">
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {Object.entries(footerLinks).map(([category, links]) => (
@@ -81,7 +81,7 @@ export function Footer({ className }) {
                         </div>
                     </div>
                 </div>
-                <div className="bg-dark-section mt-12 rounded-2xl p-6">
+                <div className="bg-dark-section mt-12 rounded-2xl p-6 shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.3)]">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                         <div className="text-neutral-400 text-sm">
                             {footerConfig.copyright}

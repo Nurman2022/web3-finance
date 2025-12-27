@@ -63,7 +63,7 @@ export function Features() {
                             viewport={{ once: true }}
                             className={feature.gridClass}
                         >
-                            <div className="relative group h-full w-full min-h-[300px] rounded-3xl border border-neutral-800 overflow-hidden bg-[#0d0d0d]">
+                            <div className="relative group h-full w-full md:min-h-[300px] min-h-[700px] rounded-3xl border border-neutral-800 overflow-hidden bg-dark-bg-secondary">
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-neutral-200/15 group-hover:bg-neutral-200/20 rounded-full blur-[100px] transition-all duration-700 ease-in-out" />
                                 <div className="relative h-full flex flex-col p-6">
                                     <div className="flex items-start gap-4 mb-6">

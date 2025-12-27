@@ -1,9 +1,9 @@
 'use client';
 import { motion } from "motion/react";
 
-export function OrbitUsers() {
+export function OrbitUsers({ className = "" }) {
     return (
-        <div className="flex items-center justify-center relative w-full h-full top-24">
+        <div className={`flex items-center justify-center relative w-full h-full top-24 ${className}`}>
             <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-96 rounded-full bg-radial from-[#1A1A1A] from-[30%] to-[#3A3A3A] shadow-2xl shadow-[#1A1A1A]"
                     animate={{ rotate: 360 }}

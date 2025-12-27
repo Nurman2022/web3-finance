@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useState, useRef, useEffect } from "react";
 
-export function LineChart() {
+export function LineChart({ className = "" }) {
     const [dotPos1, setDotPos1] = useState({ x: 0, y: 0 });
     const [dotPos2, setDotPos2] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
@@ -70,7 +70,7 @@ export function LineChart() {
         return closest;
     };
     return (
-        <div className="w-full h-full">
+        <div className={`w-full h-full ${className}`}>
             <svg
                 ref={svgRef}
                 viewBox="0 0 1420 586"
