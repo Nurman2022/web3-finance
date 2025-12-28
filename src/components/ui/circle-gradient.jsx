@@ -2,7 +2,7 @@
 
 export function CircleGradient() {
     return (
-        <div className="absolute inset-x-0 -top-40 overflow-hidden pt-20 pointer-events-none">
+        <div className="absolute inset-x-0 -top-20 md:-top-40 overflow-hidden pt-20 pointer-events-none">
             <div className="group relative w-full pt-[80%]">
                 <div
                     className="absolute top-0 left-1/2 -translate-x-1/2 z-10 w-[160%] pt-[160%] overflow-hidden rounded-[100%] 

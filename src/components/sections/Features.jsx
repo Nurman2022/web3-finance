@@ -18,14 +18,14 @@ export function Features() {
         {
             title: "Advanced Security",
             description: "Webtnx uses advanced encryption and multi-layered security to protect your assets ard personal information from threats.",
-            component: <ShieldFlowAnimation className="w-full max-w-xs" />,
+            component: <ShieldFlowAnimation />,
             icon: Shield,
             gridClass: "col-span-1 md:col-span-2 row-span-1"
         },
         {
             title: "Ecosystem & Partnerships",
             description: "Foster a thriving ecosystem through strategic partnerships, community engagement and support for innovative projects.",
-            component: <OrbitUsers className="w-full max-w-xs" />,
+            component: <OrbitUsers />,
             icon: UsersRound,
             gridClass: "col-span-1 md:col-span-2 row-span-1"
         },
@@ -63,7 +63,7 @@ export function Features() {
                             viewport={{ once: true }}
                             className={feature.gridClass}
                         >
-                            <div className="relative group h-full w-full md:min-h-80 min-h-[32rem] rounded-3xl border border-neutral-800 overflow-hidden bg-dark-bg-secondary">
+                            <div className="relative group h-full w-full md:min-h-80 min-h-[30rem] rounded-3xl border border-neutral-800 overflow-hidden bg-dark-bg-secondary">
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-neutral-200/15 group-hover:bg-neutral-200/20 rounded-full blur-[100px] transition-all duration-700 ease-in-out" />
                                 <div className="relative h-full flex flex-col p-6">
                                     <div className="flex items-start gap-4 mb-6">

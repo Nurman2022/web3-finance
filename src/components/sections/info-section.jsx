@@ -26,7 +26,7 @@ export function InfoSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 0.1 }}
-                                    className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-normal text-transparent lg:text-6xl"
+                                    className="md:text-5xl mb-4 bg-gradient-to-r from-neutral-500 md:text-left text-center via-white to-neutral-500 bg-clip-text py-8 text-4xl font-normal text-transparent lg:text-6xl"
                                 >
                                     {feature.title}
                                 </motion.h2>
@@ -35,23 +35,24 @@ export function InfoSection() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
-                                    className="text-lg text-neutral-400 leading-relaxed"
+                                    className="text-lg text-neutral-400 leading-relaxed text-center md:text-left"
                                 >
                                     {feature.description}
                                 </motion.p>
                             </div>
 
-
-                            <motion.button
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.5 }}
-                                whileHover={{ scale: 1.05, x: 5 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="relative inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-neutral-200 transition-all duration-300"
-                            >
-                                {feature.cta}
-                            </motion.button>
+                            <div className="flex justify-center md:justify-start">
+                                <motion.button
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.5 }}
+                                    whileHover={{ scale: 1.05, x: 5 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="relative inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-neutral-200 transition-all duration-300"
+                                >
+                                    {feature.cta}
+                                </motion.button>
+                            </div>
                         </motion.div>
 
                         <motion.div

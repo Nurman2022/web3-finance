@@ -5,7 +5,10 @@ export function HeroGradientCircle({ children, className = "" }) {
     return (
 
         <>
+            {/* <div className={`relative bg-gradient-to-b from-amber-800 via-blue-400 to-dark-bg border-2 border-red-600 ${className}`}> */}
             <div className={`relative bg-gradient-to-b from-neutral-800 via-dark-bg to-dark-bg ${className}`}>
+                {/* <div className={`relative bg-gradient-to-b from-dark-bg to-dark-bg md:from-neutral-800 md:via-dark-bg  ${className}`}> */}
+
                 <CircleGradient />
 
                 <div className="absolute inset-0 pointer-events-none z-10">

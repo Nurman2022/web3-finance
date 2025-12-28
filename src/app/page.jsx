@@ -38,14 +38,12 @@ export default function Home() {
           </div>
 
         </BackgroundBeamsWithCollision>
-
         <HeroGradientCircle>
           <Partners />
           <Features />
           <InfoSection />
           <FAQ />
         </HeroGradientCircle>
-
         <Footer />
       </div>
     </NavbarDemo >

@@ -40,7 +40,8 @@ export function CardStack({ className }) {
     }, [cards.length]);
 
     return (
-        <div className="relative -top-[80%] scale-[160%] -left-10">
+        <div className={cn("relative -top-[80%] scale-[160%] -left-10", className)}>
+
             {cards.map((card, index) => {
                 const relativeIndex = (index - activeIndex + cards.length) % cards.length;
                 const isActive = index === activeIndex;
@@ -48,7 +49,7 @@ export function CardStack({ className }) {
 
                     <motion.div
                         key={card.id}
-                        className={cn("absolute w-48 h-28 rounded-xl overflow-hidden", className)}
+                        className="absolute w-48 h-28 rounded-xl overflow-hidden"
                         initial={false}
                         animate={{
                             x: -relativeIndex * offset,

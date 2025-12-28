@@ -7,24 +7,17 @@ export function Partners() {
         { name: "ethereum", logo: "/image/ethereum-logo.png" },
         { name: "vechain", logo: "/image/vechain-logo.png" },
     ];
-
-    const partnersContent = {
-        badge: "Our Partners",
-        title: "Leading the Way in Crypto Trust with Webtrix",
-    };
-
-
     return (
         <>
             <div className="relative flex flex-col items-center z-20">
                 <div className="mb-8">
                     <span className="inline-flex items-center rounded-full border border-dark-grid bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
-                        {partnersContent.badge}
+                        Our Partners
                     </span>
                 </div>
 
-                <h2 className="mb-12 text-2xl font-normal sm:text-4xl bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-transparent">
-                    {partnersContent.title}
+                <h2 className="mb-12 text-2xl font-normal text-center sm:text-4xl bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-transparent">
+                    Leading the Way in Crypto Trust with Webtrix
                 </h2>
 
                 <div className="flex flex-wrap w-full items-center justify-center gap-3 md:gap-4 lg:gap-8 px-4">
