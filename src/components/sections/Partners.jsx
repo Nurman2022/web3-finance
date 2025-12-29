@@ -1,3 +1,5 @@
+import { CircleGradient } from "../ui/circle-gradient";
+
 export function Partners() {
     const partnersImg = [
         { name: "tron", logo: "/image/tron-logo.png" },
@@ -9,7 +11,8 @@ export function Partners() {
     ];
     return (
         <>
-            <div className="relative flex flex-col items-center z-20">
+            <section className="relative flex flex-col items-center z-20">
+                {/* <CircleGradient /> */}
                 <div className="mb-8">
                     <span className="inline-flex items-center rounded-full border border-dark-grid bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
                         Our Partners
@@ -34,7 +37,7 @@ export function Partners() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
         </>
 
     );

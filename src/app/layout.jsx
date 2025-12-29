@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { NavbarMain } from "@/components/navbar";
+import { CircleGradient } from "@/components/ui/circle-gradient";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,7 +20,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} antialiased`}
       >
-        {children}
+        <NavbarMain>
+          <div className="relative w-full overflow-hidden -mt-20">
+            <CircleGradient />
+            {children}
+          </div>
+        </NavbarMain>
       </body>
     </html>
   );

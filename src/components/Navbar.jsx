@@ -14,7 +14,7 @@ import { useState } from "react";
 import { User } from "lucide-react";
 import { navItems, navbarConfig } from "@/data/navbar";
 
-export function NavbarDemo({ children }) {
+export function NavbarMain({ children }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (

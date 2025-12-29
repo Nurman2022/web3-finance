@@ -6,12 +6,11 @@ export function HeroGradientCircle({ children, className = "" }) {
 
         <>
             {/* <div className={`relative bg-gradient-to-b from-amber-800 via-blue-400 to-dark-bg border-2 border-red-600 ${className}`}> */}
-            <div className={`relative bg-gradient-to-b from-neutral-800 via-dark-bg to-dark-bg ${className}`}>
-                {/* <div className={`relative bg-gradient-to-b from-dark-bg to-dark-bg md:from-neutral-800 md:via-dark-bg  ${className}`}> */}
+            <section className={`relative${className}`}>
+                {/* Overlay gradient - top from neutral to dark-bg */}
+                <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-neutral-800 md:from-neutral-800 to-transparent pointer-events-none z-20 md:invisible visible" />
 
-                <CircleGradient />
-
-                <div className="absolute inset-0 pointer-events-none z-10">
+                <div className="absolute inset-0 pointer-events-none">
                     {/* top left */}
                     <div className="absolute top-1/2 -left-96 w-[900px] h-[1000px] bg-neutral-400/20 rounded-full blur-[130px]" />
 
@@ -33,10 +32,12 @@ export function HeroGradientCircle({ children, className = "" }) {
                 </div>
 
                 {/* content */}
-                <div className="z-20">
+                {/* <div className="z-20 bg-gradient-to-b from-dark-bg-tertiary via-black/95 to-dark-bg "> */}
+                <div className="z-20 bg-gradient-to-b from-neutral-800 via-black/95 to-dark-bg ">
+
                     {children}
                 </div>
-            </div>
+            </section>
         </>
     );
 }
