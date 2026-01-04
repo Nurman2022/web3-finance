@@ -1,5 +1,3 @@
-import { CircleGradient } from "../ui/circle-gradient";
-
 export function Partners() {
     const partnersImg = [
         { name: "tron", logo: "/image/tron-logo.png" },
@@ -11,23 +9,20 @@ export function Partners() {
     ];
     return (
         <>
-            <section className="relative flex flex-col items-center z-20">
-                {/* <CircleGradient /> */}
-                <div className="mb-8">
-                    <span className="inline-flex items-center rounded-full border border-dark-grid bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300">
-                        Our Partners
-                    </span>
-                </div>
+            <section className="relative flex flex-col items-center z-20 pt-40">
+                <span className="inline-flex items-center rounded-full border border-dark-grid bg-neutral-900/50 px-4 py-2 text-sm text-neutral-300 mb-8">
+                    Our Partners
+                </span>
 
-                <h2 className="mb-12 text-2xl font-normal text-center sm:text-4xl bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-transparent">
+                <h2 className="mb-12 text-xl font-normal text-center md:text-4xl bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text text-transparent">
                     Leading the Way in Crypto Trust with Webtrix
                 </h2>
 
-                <div className="flex flex-wrap w-full items-center justify-center gap-3 md:gap-4 lg:gap-8 px-4">
+                <div className="flex flex-wrap w-full items-center justify-center gap-3 md:gap-4 lg:gap-8 px-4 max-w-4xl">
                     {partnersImg.map((partner) => (
                         <div
                             key={partner.name}
-                            className="flex h-16 md:h-20 w-32 md:w-40 items-center justify-center rounded-lg border border-dark-grid bg-dark-card px-4 md:px-6 hover:bg-white hover:scale-105 transition-all duration-300 group shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.25)]"
+                            className="flex h-16 w-32 md:h-20 md:w-40 items-center justify-center rounded-lg border border-dark-grid bg-dark-card px-6 hover:bg-white hover:scale-105 transition-all duration-300 group shadow-[0px_-2px_15px_5px_rgba(0,_0,_0,_0.25)]"
                         >
                             <img
                                 src={partner.logo}

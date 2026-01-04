@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import React, { useRef, useState, useEffect } from "react";
-import { CircleGradient } from "./circle-gradient";
 
 export const BackgroundBeamsWithCollision = ({
     children,
@@ -76,14 +75,15 @@ export const BackgroundBeamsWithCollision = ({
         <div
             ref={parentRef}
             className={cn(
-                "h-[100vh] bg-gradient-to-b from-neutral-950 to-neutral-800  relative flex items-center w-full justify-center overflow-hidden",
+                "h-screen bg-gradient-to-b from-neutral-950 to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
                 className
             )}>
-
             <div
                 className={cn(
                     "absolute inset-0",
-                    "[background-size:150px_150px]",
+                    "md:[background-size:150px_150px]",
+                    "[background-size:65px_65px]",
+
                     "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
                     "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
                 )} />
@@ -97,8 +97,6 @@ export const BackgroundBeamsWithCollision = ({
                         parentRef={parentRef} />
                 ))
             }
-            {/* <CircleGradient /> */}
-
             {children}
 
         </div>

@@ -1,14 +1,10 @@
 "use client";
-import { CircleGradient } from "./circle-gradient";
-
 export function HeroGradientCircle({ children, className = "" }) {
     return (
 
         <>
-            {/* <div className={`relative bg-gradient-to-b from-amber-800 via-blue-400 to-dark-bg border-2 border-red-600 ${className}`}> */}
             <section className={`relative${className}`}>
-                {/* Overlay gradient - top from neutral to dark-bg */}
-                <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-neutral-800 md:from-neutral-800 to-transparent pointer-events-none z-20 md:invisible visible" />
+                {/* <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-neutral-800 md:from-neutral-800 to-transparent pointer-events-none z-20 md:invisible visible" /> */}
 
                 <div className="absolute inset-0 pointer-events-none">
                     {/* top left */}
@@ -34,7 +30,6 @@ export function HeroGradientCircle({ children, className = "" }) {
                 {/* content */}
                 {/* <div className="z-20 bg-gradient-to-b from-dark-bg-tertiary via-black/95 to-dark-bg "> */}
                 <div className="z-20 bg-gradient-to-b from-neutral-800 via-black/95 to-dark-bg ">
-
                     {children}
                 </div>
             </section>

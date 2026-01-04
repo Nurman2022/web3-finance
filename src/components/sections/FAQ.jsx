@@ -26,13 +26,13 @@ export function FAQ() {
 
     return (
         <section className="w-full overflow-hidden py-40 max-w-7xl mx-auto px-6 z-10">
-            <div className="flex flex-col lg:flex-row items-start justify-between gap-12 mb-16">
+            <div className="flex flex-col lg:flex-row items-start justify-between gap-8 mb-12">
                 <div className="flex-1">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="md:text-5xl md:text-left text-center mb-6 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-8 text-4xl font-normal text-transparent lg:text-6xl"
+                        className="md:text-left text-center mb-6 bg-gradient-to-r from-neutral-500 via-white to-neutral-500 bg-clip-text py-4 md:py-8 text-3xl font-normal text-transparent md:text-6xl"
                     >
                         Have a Questions?<br />
                         We've Got Your Answers.
@@ -56,7 +56,7 @@ export function FAQ() {
                             transition={{ duration: 0.6, delay: 0.5 }}
                             whileHover={{ scale: 1.05, x: 5 }}
                             whileTap={{ scale: 0.95 }}
-                            className="relative inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-neutral-200 transition-all duration-300"
+                            className="relative inline-flex items-center gap-3 bg-white text-black px-6 py-4 rounded-full font-medium text-sm md:text-base hover:bg-neutral-200 transition-all duration-300"
                         >
                             Read More
                         </motion.button>
